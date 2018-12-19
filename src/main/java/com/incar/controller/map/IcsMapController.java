@@ -1,5 +1,7 @@
 package com.incar.controller.map;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.incar.base.Dispatcher;
 import com.incar.base.exception.NoHandlerException;
 import com.incar.business.MapTrackingStarter;
@@ -16,11 +18,23 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/api/sample")
 public class IcsMapController {
 
+    Dispatcher dispatcher;
 
-    @RequestMapping(value = "/version1/**",method = RequestMethod.GET)
+
+    public IcsMapController() {
+        dispatcher = MapTrackingStarter.getDispatcher();
+        dispatcher.getConfig().withRequestMappingPre("/api/sample/ics");
+        dispatcher.getDynamicRequestHandler().withJsonReader(obj->{
+            try {
+                return new ObjectMapper().writeValueAsString(obj);
+            } catch (JsonProcessingException e) {
+               throw new RuntimeException(e.getMessage());
+            }
+        });
+    }
+
+    @RequestMapping(value = "/ics/**",method = RequestMethod.GET)
     public void request(HttpServletRequest request, HttpServletResponse response){
-        Dispatcher dispatcher = MapTrackingStarter.getDispatcher();
-        dispatcher.getConfig().withMappingPre("/api/sample/version1");
         try {
             dispatcher.dispatch(request,response);
         }catch (NoHandlerException e) {

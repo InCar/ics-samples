@@ -10,6 +10,7 @@ allprojects{
     repositories {
         mavenLocal()
         maven { url "${mavenRepoUrl}" }
+        maven { url 'https://repository.incarcloud.com/content/repositories/snapshots/' }
         jcenter()
 //        mavenCentral()
     }
@@ -18,12 +19,13 @@ allprojects{
         //springboot web支持
         compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
         //外部jar包
-        compile fileTree(dir:'lib',includes:['*jar'])
+        /*compile fileTree(dir:'lib',includes:['*jar'])*/
 
         //json
         compile("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
         compile("com.fasterxml.jackson.core:jackson-core:${jacksonVersion}")
         compile("com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}")
+        compile("com.incar:ics-map-tracking:1.7-SNAPSHOT")
 
     }
 

@@ -1,4 +1,7 @@
 server:
   port: 8889
 
-
+spring.resources.chain.cache: false
+spring:
+  mvc:
+    static-path-pattern: /static/**

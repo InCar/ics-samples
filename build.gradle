@@ -1,5 +1,5 @@
 allprojects{
-    group 'com.incar'
+    group 'com.incarcloud'
     version '1.0-SNAPSHOT'
     apply plugin: 'java'
     apply plugin: 'idea'
@@ -18,14 +18,13 @@ allprojects{
     dependencies{
         //springboot web支持
         compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
-        //外部jar包
-        /*compile fileTree(dir:'lib',includes:['*jar'])*/
 
         //json
         compile("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
         compile("com.fasterxml.jackson.core:jackson-core:${jacksonVersion}")
         compile("com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}")
-        compile("com.incar:ics-map-tracking:1.7-SNAPSHOT")
+
+        compile("com.incarcloud.ics:ics-map-tracking:1.5-SNAPSHOT")
 
     }
 
@@ -47,7 +46,7 @@ allprojects{
      */
     bootJar {
         manifest {
-            attributes 'Start-Class': 'com.incar.Application'
+            attributes 'Start-Class': 'com.incarcloud.Application'
         }
     }
 }

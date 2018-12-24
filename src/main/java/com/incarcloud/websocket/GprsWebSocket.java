@@ -1,6 +1,10 @@
 package com.incarcloud.websocket;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.incarcloud.simulationdata.entity.ObdLocation;
+import jdk.nashorn.internal.ir.debug.JSONWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,6 +76,23 @@ public class GprsWebSocket {
      */
     public void sendMessage(String message) throws IOException {
         this.session.getBasicRemote().sendText(message);
+    }
+
+    /**
+     * 发送车辆信息
+     * @param obdLocation
+     * @throws IOException
+     */
+    public static void sendGpsMessage(ObdLocation obdLocation) throws IOException {
+        //没消息就直接返回
+        if (obdLocation == null){
+            return;
+        }
+        //数据推送
+        ObjectMapper mapper = new ObjectMapper();
+        for (GprsWebSocket gprsWebSocket:gpsWebsocket){
+            gprsWebSocket.sendMessage(mapper.writeValueAsString(obdLocation));
+        }
     }
 
 }

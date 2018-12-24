@@ -21,7 +21,10 @@
     var maptrack = new Maptrack({
         dom: "apiId",
         mapType: 'bmap',
-        mapTrack: true
+        mapTrack: true,
+        trackconfig: {
+            trackApi: '/api/sample'
+        }
     });
     maptrack.init();
 </script>

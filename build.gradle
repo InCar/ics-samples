@@ -24,7 +24,7 @@ allprojects{
         compile("com.fasterxml.jackson.core:jackson-core:${jacksonVersion}")
         compile("com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}")
 
-        compile("com.incarcloud.ics:ics-map-tracking:1.5-SNAPSHOT")
+        compile("com.incarcloud.ics:ics-map-tracking:2.2-SNAPSHOT")
 
     }
 

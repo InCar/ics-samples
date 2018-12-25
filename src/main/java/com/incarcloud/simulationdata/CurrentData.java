@@ -42,7 +42,7 @@ public class CurrentData implements ApplicationRunner {
             String recordTimeEnd = "2018-12-21 14:07:57";
             String sql2 = "select * from t_obd_location where vin = ? and  recordtime >= ? and recordtime < ? order by locationtime";
             Object args[] = new Object[]{vin, recordTime, recordTimeEnd};
-            List<ObdLocation> list1 = jdbcTemplate1.query(sql2, args, new BeanPropertyRowMapper(ObdLocation.class));
+            @SuppressWarnings("unchecked") List<ObdLocation> list1 = jdbcTemplate1.query(sql2, args, new BeanPropertyRowMapper(ObdLocation.class));
             Thread thread = new Thread() {
                 @Override
                 public void run() {
@@ -53,7 +53,7 @@ public class CurrentData implements ApplicationRunner {
                             ObdLocation obdLocation1 = list1.get(i + 1);
                             GprsWebSocket.sendGpsMessage(obdLocation);
                             long oob = obdLocation1.getLocationTime().getTime() - obdLocation.getLocationTime().getTime();
-                            logger.info("~~~~~~~~~  vin:" + vin + "  间隔时间为：" + oob);
+                            logger.info("~~~~~~~~~  vin: " + vin + "  间隔时间为：" + oob);
                             Thread.sleep(oob);
                             i++;
                             if(i == list1.size() - 2 ){

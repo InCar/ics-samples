@@ -18,14 +18,15 @@ allprojects{
     dependencies{
         //springboot web支持
         compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
-
+        //springboot websocket支持
+        compile("org.springframework.boot:spring-boot-starter-websocket:${springBootVersion}")
         //json
         compile("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
         compile("com.fasterxml.jackson.core:jackson-core:${jacksonVersion}")
         compile("com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}")
         compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
 
-        compile("com.incarcloud.ics:ics-map-tracking:2.2-SNAPSHOT")
+        compile("com.incarcloud.ics:ics-map-tracking:2.3-SNAPSHOT")
 
     }
 
@@ -80,3 +81,4 @@ buildscript {
     }
 
 }
+

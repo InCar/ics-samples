@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.incarcloud.simulationdata.entity.ObdLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 @ServerEndpoint(value = "/api/ws/gpsWebSocket")
+@Component
 public class GprsWebSocket {
 
     private static Logger logger = LoggerFactory.getLogger(GprsWebSocket.class);
@@ -25,11 +27,11 @@ public class GprsWebSocket {
 
     /**
      * 连接建立成功
+     *
      * @param session
      */
     @OnOpen
-    public void onOpen(Session session){
-
+    public void onOpen(Session session) {
         //初始化session
         this.session = session;
 
@@ -38,36 +40,40 @@ public class GprsWebSocket {
 
     /**
      * 连接关闭调用的方法
+     *
      * @param session
      */
     @OnClose
-    public void onClose(Session session){
+    public void onClose(Session session) {
         gpsWebsocket.remove(this);
     }
 
 
     /**
      * 收到客户端消息后调用的方法
+     *
      * @param message
      * @param session
      */
     @OnMessage
-    public void onMessage(String message,Session session){
-        System.out.println("来自客户端的消息："+message);
+    public void onMessage(String message, Session session) {
+        System.out.println("来自客户端的消息：" + message);
     }
 
     /**
      * 发生错误时使用
+     *
      * @param session
      */
     @OnError
-    public void OnError(Session session,Throwable error){
+    public void OnError(Session session, Throwable error) {
         System.out.println("发生错误");
         error.printStackTrace();
     }
 
     /**
      * 发送消息
+     *
      * @param message
      * @throws IOException
      */
@@ -77,17 +83,18 @@ public class GprsWebSocket {
 
     /**
      * 发送车辆信息
+     *
      * @param obdLocation
      * @throws IOException
      */
     public static void sendGpsMessage(ObdLocation obdLocation) throws IOException {
         //没消息就直接返回
-        if (obdLocation == null){
+        if (obdLocation == null) {
             return;
         }
         //数据推送
         ObjectMapper mapper = new ObjectMapper();
-        for (GprsWebSocket gprsWebSocket:gpsWebsocket){
+        for (GprsWebSocket gprsWebSocket : gpsWebsocket) {
             gprsWebSocket.sendMessage(mapper.writeValueAsString(obdLocation));
         }
     }

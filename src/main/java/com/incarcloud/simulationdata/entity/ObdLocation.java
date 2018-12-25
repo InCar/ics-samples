@@ -117,5 +117,21 @@ public class ObdLocation {
         this.recordTime = recordTime;
     }
 
-
+    @Override
+    public String toString() {
+        return "ObdLocation{" +
+                "obdCode='" + obdCode + '\'' +
+                ", tripId=" + tripId +
+                ", vid='" + vid + '\'' +
+                ", vin='" + vin + '\'' +
+                ", locationSpeed=" + locationSpeed +
+                ", travelDistance=" + travelDistance +
+                ", longitude='" + longitude + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", direction=" + direction +
+                ", locationTime=" + locationTime +
+                ", locationType=" + locationType +
+                ", recordTime=" + recordTime +
+                '}';
+    }
 }

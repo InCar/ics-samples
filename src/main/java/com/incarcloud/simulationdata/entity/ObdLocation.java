@@ -14,7 +14,7 @@ public class ObdLocation {
     private String vin;
     private Integer locationSpeed;
     private Integer travelDistance;
-    private Double lon;
+    private Double lng;
     private Double lat;
     private Double direction;
     private Timestamp locationTime;
@@ -70,12 +70,12 @@ public class ObdLocation {
         this.travelDistance = travelDistance;
     }
 
-    public Double getLon() {
-        return lon;
+    public Double getLng() {
+        return lng;
     }
 
-    public void setLon(Double lon) {
-        this.lon = lon;
+    public void setLng(Double lng) {
+        this.lng = lng;
     }
 
     public Double getLat() {
@@ -135,7 +135,7 @@ public class ObdLocation {
                 ", vin='" + vin + '\'' +
                 ", locationSpeed=" + locationSpeed +
                 ", travelDistance=" + travelDistance +
-                ", lon=" + lon +
+                ", lng=" + lng +
                 ", lat=" + lat +
                 ", direction=" + direction +
                 ", locationTime=" + locationTime +

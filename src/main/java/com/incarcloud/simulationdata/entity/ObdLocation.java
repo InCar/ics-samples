@@ -14,12 +14,13 @@ public class ObdLocation {
     private String vin;
     private Integer locationSpeed;
     private Integer travelDistance;
-    private String longitude;
-    private String latitude;
+    private Double lon;
+    private Double lat;
     private Double direction;
     private Timestamp locationTime;
     private Integer locationType;
     private Timestamp recordTime;
+    private String plateNo;
 
     public String getObdCode() {
         return obdCode;
@@ -69,20 +70,28 @@ public class ObdLocation {
         this.travelDistance = travelDistance;
     }
 
-    public String getLongitude() {
-        return longitude;
+    public Double getLon() {
+        return lon;
     }
 
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
+    public void setLon(Double lon) {
+        this.lon = lon;
     }
 
-    public String getLatitude() {
-        return latitude;
+    public Double getLat() {
+        return lat;
     }
 
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
+
+    public String getPlateNo() {
+        return plateNo;
+    }
+
+    public void setPlateNo(String plateNo) {
+        this.plateNo = plateNo;
     }
 
     public Double getDirection() {
@@ -126,12 +135,13 @@ public class ObdLocation {
                 ", vin='" + vin + '\'' +
                 ", locationSpeed=" + locationSpeed +
                 ", travelDistance=" + travelDistance +
-                ", longitude='" + longitude + '\'' +
-                ", latitude='" + latitude + '\'' +
+                ", lon=" + lon +
+                ", lat=" + lat +
                 ", direction=" + direction +
                 ", locationTime=" + locationTime +
                 ", locationType=" + locationType +
                 ", recordTime=" + recordTime +
+                ", plateNo='" + plateNo + '\'' +
                 '}';
     }
 }

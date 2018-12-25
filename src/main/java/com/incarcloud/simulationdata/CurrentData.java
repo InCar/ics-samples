@@ -51,9 +51,9 @@ public class CurrentData implements ApplicationRunner {
                         try {
                             ObdLocation obdLocation = list1.get(i);
                             ObdLocation obdLocation1 = list1.get(i + 1);
-                            GprsWebSocket.sendGpsMessage(obdLocation);
                             long oob = obdLocation1.getLocationTime().getTime() - obdLocation.getLocationTime().getTime();
                             logger.info("~~~~~~~~~  vin: " + vin + "  间隔时间为：" + oob);
+                            GprsWebSocket.sendGpsMessage(obdLocation);
                             Thread.sleep(oob);
                             i++;
                             if(i == list1.size() - 2 ){

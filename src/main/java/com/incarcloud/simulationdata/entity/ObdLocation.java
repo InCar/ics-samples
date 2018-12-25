@@ -116,4 +116,6 @@ public class ObdLocation {
     public void setRecordTime(Timestamp recordTime) {
         this.recordTime = recordTime;
     }
+
+
 }

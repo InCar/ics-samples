@@ -1,17 +1,14 @@
 package com.incarcloud.websocket;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.incarcloud.simulationdata.entity.ObdLocation;
-import jdk.nashorn.internal.ir.debug.JSONWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
-import java.security.Principal;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 @ServerEndpoint(value = "/api/ws/gpsWebSocket")

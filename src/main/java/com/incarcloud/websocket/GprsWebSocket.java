@@ -10,7 +10,12 @@ import org.springframework.stereotype.Component;
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.stream.Collectors;
 
 @ServerEndpoint(value = "/api/ws/gpsWebSocket")
 @Component
@@ -24,6 +29,8 @@ public class GprsWebSocket {
     //与某个客户端的连接会话，需要通过它来给客户端发送数据
     private Session session;
 
+    private Set<String> vinsSet; //存gprscode参数
+
 
     /**
      * 连接建立成功
@@ -34,6 +41,12 @@ public class GprsWebSocket {
     public void onOpen(Session session) {
         //初始化session
         this.session = session;
+        Map<String, List<String>> params = session.getRequestParameterMap();
+        List<String> gprscodes = params.get("vins");
+        if (gprscodes == null || gprscodes.size() == 0) {
+            return;
+        }
+        vinsSet = Arrays.stream(gprscodes.get(0).split(",")).collect(Collectors.toSet());
 
         gpsWebsocket.add(this);
     }
@@ -95,7 +108,10 @@ public class GprsWebSocket {
         //数据推送
         ObjectMapper mapper = new ObjectMapper();
         for (GprsWebSocket gprsWebSocket : gpsWebsocket) {
-            gprsWebSocket.sendMessage(mapper.writeValueAsString(obdLocation));
+            //gprs过滤
+            if (gprsWebSocket.vinsSet.contains(obdLocation.getVin())) {
+                gprsWebSocket.sendMessage(mapper.writeValueAsString(obdLocation));
+            }
         }
     }
 

@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:c="http://www.w3.org/1999/html">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>hello</title>
-    <style type="text/css">
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
 </head>
 <body>
 
 <div id="apiId" style="width:100%;height:100%;">
 </div>
-<script src="../../../api/sample/ics/static/maptracking/js/index.js">
 
+<script src="../../../api/sample/ics/static/maptracking/js/testbundle.js">
 </script>
 <script>
-    var maptrack = new Maptrack({
+    new Maptrack({
         dom: "apiId",
         mapType: 'bmap',
-        mapMointer: true,
-       /* config: {
-            trackApi: '/api/sample'
-        }*/
+        mapTrack: true,
+        mapMointer: false,
+        config: {
+            // soketUrl: 'ws://192.168.75.1:8889/api/ws/gpsWebSocket'
+            trackControl: {
+                startButton: '开',
+            }
+        }
     });
-    maptrack.init();
+
 </script>
 </body>
 </html>

@@ -3,7 +3,7 @@ package com.incarcloud.controller.map;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.incarcloud.base.anno.ICSComponent;
-import com.incarcloud.base.handler.dynamicrequest.json.JsonReader;
+import com.incarcloud.base.json.JsonReader;
 
 
 @ICSComponent

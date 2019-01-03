@@ -28,6 +28,7 @@ allprojects{
 
         compile("com.incarcloud.ics:ics-map-tracking:3.2-SNAPSHOT")
         compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+
     }
 
     gradle.projectsEvaluated {

@@ -7,8 +7,9 @@
 </head>
 <body>
 
-<div id="apiId" style="width:100%;height:100%;">
+<div id="apiId" style="width:100%;height:100%;" class="frame">
 </div>
+
 
 <script src="../../../api/sample/ics/static/maptracking/js/testbundle.js">
 </script>
@@ -30,7 +31,9 @@
             iconUrl: '../img/driving.png',    // 车辆图标
             startIcon: "../img/start.png",  // 轨迹开始图标
             endIcon: "../img/end.png",    // 轨迹结束图标
-            iconSize: [50, 50],  // 图标尺寸，默认28
+            markerSize: [20, 43],  // 车辆图标尺寸 不需要偏移量，直接设置为原始图片大小
+            startEndSize: [26, 37],  // 开始结束图标尺寸
+            startEndAnchor: [10, 37],  // 开始结束图标偏移量 前面一位数字是宽度的一半，后面一位数字是高度
             trackControl: {    // 轨迹按钮自定义
                 startButton: '开',
                 endButton: '暂停',
@@ -95,6 +98,14 @@
     //     let marker = new BMap.Marker(point);
     //     map.addOverlay(marker);  // 标点
     //    })
+    function myCheck() {
+        var div = document.getElementById("apiId")
+        if (div.className.indexOf('frame') >= 0){
+            div.className='frame2';
+        }else {
+            div.className='frame';
+        }
+    }
 </script>
 </body>
 </html>

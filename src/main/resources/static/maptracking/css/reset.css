@@ -128,3 +128,12 @@ body {
   /*overflow: -webkit-paged-y;*/
   /*padding: 5px*/
 /*}*/
+
+.frame{
+  width: 100%;
+  height: 100%;
+}
+.frame2{
+  width: 50%;
+  height: 50%;
+}

@@ -16,9 +16,9 @@
     let track = new Maptrack({
         dom: "apiId",
         mapType: 'bmap',
-        mapTrack: true,       // 是否开启轨迹
+        mapTrack: false,       // 是否开启轨迹
         splitTrack: false,       // 是否开启分段轨迹
-        mapMointer: false,   // 是否开启推送
+        mapMointer: true,   // 是否开启推送
         config: {
             gps: [116.404, 39.915], // 初始化地图经纬度
             zoom: 16,                // 初始化地图层级
@@ -27,10 +27,10 @@
             splitTrackParam: {startTime: 1543785649000, endTime: 1543856950000, vin: "LVGEN56A4JG247290"},  // 分段轨迹参数
             soketUrl: 'ws://192.168.75.1:8889/api/ws/gpsWebSocket',   // 推送地址
             vinCode: 'LFMB0ABB9F0005006',     // 推送vin码
-            iconUrl: '../img/car.png',    // 车辆图标
+            iconUrl: '../img/driving.png',    // 车辆图标
             startIcon: "../img/start.png",  // 轨迹开始图标
             endIcon: "../img/end.png",    // 轨迹结束图标
-            iconSize: [28, 28],  // 图标尺寸，默认28
+            iconSize: [50, 50],  // 图标尺寸，默认28
             trackControl: {    // 轨迹按钮自定义
                 startButton: '开',
                 endButton: '暂停',
@@ -61,7 +61,7 @@
     // gps转高德坐标
     // track.GPS.translateToAmap({lat: 39.990912172420714, lng: 116.32715863448607})
     // 创建点
-    track.init((BMap, map) = > {
+    track.init((BMap, map) => {
         let data = {
             lat: 39.990912172420714,
             lng: 116.32715863448607

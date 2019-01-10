@@ -11,7 +11,7 @@
 </div>
 
 
-<script src="../../../api/sample/ics/static/maptracking/js/testbundle.js">
+<script src="http://127.0.0.1:8889/api/sample/ics/static/maptracking/js/testbundle.js">
 </script>
 <script>
     let track = new Maptrack({
@@ -26,7 +26,7 @@
             trackApi: '/api/sample',           // 自定义路径
             trackParam: {startTime: 1539108541000, endTime: 1539109463000, vin: "LVGEN56A4JG247290"},  // 轨迹参数
             splitTrackParam: {startTime: 1543785649000, endTime: 1543856950000, vin: "LVGEN56A4JG247290"},  // 分段轨迹参数
-            soketUrl: 'ws://192.168.75.1:8889/api/ws/gpsWebSocket',   // 推送地址
+            soketUrl: 'ws://127.0.0.1:8889/api/ws/gpsWebSocket',   // 推送地址
             vinCode: 'LFMB0ABB9F0005006',     // 推送vin码
             iconUrl: '../img/driving.png',    // 车辆图标
             startIcon: "../img/start.png",  // 轨迹开始图标

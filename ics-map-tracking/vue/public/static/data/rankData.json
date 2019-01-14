@@ -1,0 +1,128 @@
+[
+  [
+    {
+      "cityName": "广东省",
+      "num": 1634
+    },
+    {
+      "cityName": "山东省",
+      "num": 1502
+    },
+    {
+      "cityName": "上海市",
+      "num": 1497
+    },
+    {
+      "cityName": "北京市",
+      "num": 1272
+    },
+    {
+      "cityName": "江苏省",
+      "num": 1161
+    },
+    {
+      "cityName": "福建省",
+      "num": 1043
+    },
+    {
+      "cityName": "浙江省",
+      "num": 940
+    },
+    {
+      "cityName": "河南省",
+      "num": 935
+    },
+    {
+      "cityName": "辽宁省",
+      "num": 832
+    },
+    {
+      "cityName": "天津市",
+      "num": 830
+    }
+  ],
+  [
+    {
+      "cityName": "上海市",
+      "num": 18863
+    },
+    {
+      "cityName": "河南省",
+      "num": 16358
+    },
+    {
+      "cityName": "广东省",
+      "num": 16245
+    },
+    {
+      "cityName": "北京市",
+      "num": 11835
+    },
+    {
+      "cityName": "山东省",
+      "num": 10765
+    },
+    {
+      "cityName": "江苏省",
+      "num": 8499
+    },
+    {
+      "cityName": "福建省",
+      "num": 6938
+    },
+    {
+      "cityName": "山西省",
+      "num": 4957
+    },
+    {
+      "cityName": "四川省",
+      "num": 3555
+    },
+    {
+      "cityName": "江西省",
+      "num": 2815
+    }
+  ],
+  [
+    {
+      "cityName": "上海市",
+      "num": 37124
+    },
+    {
+      "cityName": "广东省",
+      "num": 35064
+    },
+    {
+      "cityName": "河南省",
+      "num": 34658
+    },
+    {
+      "cityName": "山东省",
+      "num": 32642
+    },
+    {
+      "cityName": "北京市",
+      "num": 27410
+    },
+    {
+      "cityName": "福建省",
+      "num": 22615
+    },
+    {
+      "cityName": "江苏省",
+      "num": 20061
+    },
+    {
+      "cityName": "江西省",
+      "num": 15842
+    },
+    {
+      "cityName": "四川省",
+      "num": 14132
+    },
+    {
+      "cityName": "山西省",
+      "num": 12620
+    }
+  ]
+]

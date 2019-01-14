@@ -1,2 +1,5 @@
 rootProject.name = 'ics-samples'
+include 'ics-mapping'
+include 'ics-ambito'
+include 'ics-map-tracking'
 

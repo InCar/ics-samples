@@ -1,0 +1,137 @@
+// login
+.login-form1 {
+  .ivu-checkbox-wrapper {
+    color: white !important;
+  }
+  .ivu-form-item-error {
+    .logininfo {
+      .ivu-input:focus-within, .ivu-input:hover {
+        border: 1px solid #ed3f14 !important;
+        border-left:none !important;
+      }
+      .ivu-input:focus-within.ivu-input:hover {
+        border-color: #ed3f14 !important
+      }
+      .ivu-input-wrapper:focus-within > .ivu-input-group-prepend{
+        border-color: #ed3f14 !important;
+      }
+    }
+    .vercode {
+      .ivu-input:focus, .ivu-input:hover {
+        border: 1px solid #ed3f14 !important;
+      }
+    }
+  }
+}
+
+
+.login-form1 .logininfo {
+  .ivu-form-item {
+    background: #5B87D7;
+    margin-bottom: 7%  !important;
+  }
+  .ivu-input{
+    height: 50px;
+    background-color: white;
+    border-left:none;
+    // color: #ffffff;
+  }
+  .ivu-input:hover{
+    border-color: #dddee1 !important
+  }
+  .ivu-input:focus-within, .ivu-input:hover {
+    border-left:none;
+    outline:none;
+    box-shadow: 0 0 0 0 white;
+  }
+  .ivu-input:focus-within.ivu-input:hover {
+    border-color: #57a3f3 !important
+  }
+  .ivu-input-group-prepend{
+    border-radius: 2px !important;
+    background-color: white;
+    transition: all 0.3s
+  }
+  .ivu-input-wrapper:focus-within > .ivu-input-group-prepend{
+    border-color: #57a3f3 !important;
+    transition: all 0.3s
+  }
+  .ivu-btn-primary:hover {
+    color: #ffffff;
+    //background-color: #7488ea;
+    //border-color: #7488ea;
+  }
+}
+.login-form1 .vercode {
+  .ivu-form-item {
+    background: #5B87D7;
+    margin-bottom: 7%  !important;
+  }
+
+  .ivu-input:focus, .ivu-input:hover {
+    //border-left:none;
+    outline:none;
+    box-shadow: 0 0 0 0 white;
+    border-color: #dddee1;
+  }
+  .ivu-form-item-error {
+    .ivu-input:focus, .ivu-input:hover {
+      border: 1px solid #ed3f14;
+      //border-left:none;
+    }
+  }
+  .ivu-input-group-prepend{
+    border-radius: 2px !important;
+    background-color: white;
+  }
+}
+
+/* 大屏 */
+@media screen and (min-width: 1681px) {
+  .login-form1 .logininfo {
+    .ivu-input {
+      height: 50px !important;
+      background-color: white !important;
+      border-left: none;
+      // color: #ffffff;
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-radius: 2px !important;
+    }
+    .ivu-input-group-prepend{
+      padding: 6px 12px !important;
+      border-radius: 2px !important;
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      background-color: white;
+    }
+  }
+  .ivu-btn-large {
+    border-radius: 2px !important;
+}
+}
+
+/* 小屏 */
+@media screen and (max-width: 1680px) {
+  .login-form1 .logininfo {
+    .ivu-input {
+      height: 36px !important;
+      background-color: white !important;
+      border-left: none;
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-radius: 2px !important;
+      // color: #ffffff;
+    }
+    .ivu-input-group-prepend{
+      padding: 6px 12px !important;
+      border-radius: 2px !important;
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      background-color: white;
+    }
+  }
+  .ivu-btn-large {
+    border-radius: 2px !important;
+}
+}

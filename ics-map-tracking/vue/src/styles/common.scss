@@ -1,0 +1,362 @@
+@import 'vars';
+@import 'mixins';
+@import 'login';
+@import 'home';
+// 菜单管理
+.el-menu--horizontal.el-menu {
+  background: $content_bg;
+  border-bottom: none !important;
+  >.el-menu-item.is-active{
+    border-bottom: none !important;
+    color: white !important;
+    background-color: $blue !important;
+    border-top: 3px solid #60B9FF !important;
+  }
+ .el-menu-item {
+   line-height: 30px !important;
+   border-bottom: none !important;
+   height: 78px;
+   padding: 10px 14px;
+ }
+  .el-submenu {
+    line-height: 30px !important;
+    border-bottom: none !important;
+    height: 78px;
+    padding: 10px 14px;
+    .el-submenu__title {
+      line-height: 30px;
+      padding: 0;
+      height: 56px;
+      border-bottom: none!important;
+    }
+    &:hover{
+      background-color: rgb(204, 204, 204) !important;
+      // color: white !important;
+    }
+  }
+}
+.el-menu--horizontal>.el-submenu .el-submenu__icon-arrow {
+    position: absolute !important;
+    right: -15px;
+    top: 42px;
+    display: none;
+}
+.el-menu--horizontal>.el-submenu.is-active {
+  border-bottom: none !important;
+  color: white !important;
+  background-color: $blue !important;
+  border-top: 3px solid #60B9FF;
+  &:hover {
+    color: white !important;
+    background-color: $blue !important;
+  }
+}
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
+  i,span {
+    color: white !important;
+  }
+  &:hover{
+    color: white !important;
+    background-color: $blue !important;
+    border-bottom: none !important;
+  }
+}
+.el-menu--horizontal ul {
+  background-color: #fff !important;
+  min-width: 86px;
+  text-align: center;
+  margin-top: 9px;
+  li span{
+    font-size: 12px;
+  }
+}
+.el-menu--horizontal ul li:hover {
+  background-color: #ccc !important;
+  color: rgb(48, 49, 51) !important;
+}
+.el-menu--horizontal .el-menu .el-menu-item.is-active {
+  background-color: $blue !important;
+  color: white !important;
+}
+.el-breadcrumb__inner a, .el-breadcrumb__inner.is-link {
+  font-weight: normal !important;
+}
+.ivu-table-border th {
+  span {
+    font-weight: bold !important;
+  }
+}
+
+
+ .hy-search-bar2{
+  height: auto;
+  width: 100%;
+  padding: 5px 20px;
+  position: relative;
+  .ivu-form-item {
+    margin-bottom:10px;
+  }
+  .ivu-input,.ivu-select-selection{
+    border:1px solid #DCE0E3;
+    background-color:white;
+  }
+}
+// 导出
+.exports {
+  background: #0f68b7 !important;
+  border-color: #0f68b7 !important;
+}
+.ivu-btn-ghost.ghost-blue-btn {
+  color: #0f68b7;
+  background-color: #fff;
+  border-color: #0f68b7;
+}
+.content {
+  height: 100%;
+  padding: 0 1%
+}
+
+// home 2 table Style
+.nationalTable {
+  .ivu-table-wrapper {
+    border:none;
+  }
+  .ivu-table-header {
+    color: #1993FF;
+    background-color: #061A4E;
+  }
+  .ivu-table:before {
+    background-color: transparent;
+  }
+  .ivu-table:after {
+    background-color: transparent;
+  }
+  .ivu-table-small td {
+    // height: 28px;
+    // height: 25px;
+    height: 4.1vh;
+  }
+  .ivu-table {
+    background-color: transparent;
+    color: #fff;
+    th {
+      background-color: transparent;
+      border-bottom: 1px solid rgba(7,42,93,0.6);
+      border-right: 2px solid #0b1731;
+    }
+    td {
+      background-color: transparent;
+      border-bottom: 1px solid rgba(7,42,93,0.6);
+      .ivu-table-cell{
+        height: 100%;
+        position: relative;
+      }
+    }
+  }
+}
+//浮动清除
+.clear:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.clear {
+  zoom: 1;
+}
+// model Style 弹框样式
+.ivu-modal-header {
+  // background-image: url("/static/images/header/background.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #F0F0F0;
+}
+
+// 搜索条件样式 lr
+.hy-search-bar2 .ivu-form .ivu-form-item-label, .ivu-form.large-label .ivu-form-item-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1680px) {
+  .ivu-btn-large {
+    border-radius: 4px !important;
+  }
+}
+.ivu-form.large-label .ivu-form-item-label {
+  color: #515a6e;
+}
+.ivu-input[readonly] {
+  color: #999;
+}
+.titleColor {
+  .ivu-table th {
+    background-color: #e6e6e7;
+    border-right: 1px solid #CDCDCF;
+  }
+}
+// table lr
+.ivu-table th {
+  background-color: #e6e6e7;
+  span {
+    font-weight: bold;
+  }
+}
+.ivu-table-cell{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+// tab lr
+.ivu-tabs.ivu-tabs-card.tab-ll{
+  .ivu-tabs-bar{
+    margin-bottom: 0;
+    .ivu-tabs-tab {
+      margin-right: 8px;
+      background-color: #fff;
+    }
+  }
+  &>.ivu-tabs-bar {
+    .ivu-tabs-tab-active {
+      border-color: #1778cc;
+      color: #fff;
+      background: #1778cc;
+    }
+  }
+}
+.tab-ll {
+  .ivu-tabs-nav-scroll {
+    position: relative;
+    &:after{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content:"";
+      width: 100%;
+      border-bottom: 2px solid #1778cc;
+    }
+  }
+  .ivu-table-wrapper {
+    margin-top: 0px;
+  }
+}
+
+.userRank {
+    border:none !important;
+    height: 100%;
+  .ivu-table-header {
+    height: 10%;
+    color: #1993FF;
+    background-color: #061A4E;
+  }
+  .ivu-table-body {
+    height: 90%;
+    table {
+      height: 100%;
+      td {
+        height: 10%;
+        .ivu-table-cell{
+          height: 100%;
+          position: relative;
+        }
+      }
+    }
+  }
+  .ivu-table:before {
+    background-color: transparent;
+  }
+  .ivu-table:after {
+    background-color: transparent;
+  }
+  .ivu-table-small td {
+    height: 28px;
+  }
+  .ivu-table {
+    background-color: transparent;
+    color: #fff;
+    th {
+      height: 4vh;
+      background-color: transparent;
+      border-bottom: none;
+    }
+    thead {
+      .ivu-table-column-center:nth-child(2) {
+        border-right: 1px solid #061D3D;
+        border-left: 1px solid #061D3D;
+      }
+    }
+    td {
+      background-color: transparent;
+      border-bottom: 1px solid #101F51;
+    }
+  }
+}
+
+// 删除按钮 style
+.ivu-btn-text {
+  float: right;
+}
+
+// all table
+@media screen and (max-width: 1681px) {
+.titleColor {
+  .ivu-table td {
+      height: 36px;
+    }
+    .ivu-table th {
+    height: 36px
+  }
+}
+}
+
+// all detail table
+@media screen and (max-width: 1681px) {
+  .tab-con-wrap {
+    .ivu-table td {
+      height: 36px;
+    }
+    .ivu-table th {
+      height: 36px;
+    }
+  }
+}
+.tab-con-wrap {
+  .ivu-table th {
+    border-right: 1px solid #CDCDCF;
+    background-color: #e6e6e7;
+  }
+}
+
+.el-carousel__item.is-animating {
+  transition: none !important
+}
+
+//tableRotate
+.roTable {
+  // position: relative;
+    height: 100%;
+    .under {
+      position: absolute;
+      -webkit-perspective: 10000;
+      backface-visibility: hidden;
+      transition: all 3s;
+      width: 100%;
+      top: 1vh;
+    }
+    .back {
+      transform: rotateX(180deg);
+    }
+}
+.roTableA .front {
+  transform: rotateX(180deg);
+}
+.roTableA .back {
+  transform: rotateX(360deg);
+}
+.roTableB .front {
+  transform: rotateX(360deg);
+}
+.roTableB .back {
+  transform: rotateX(180deg);
+}
+

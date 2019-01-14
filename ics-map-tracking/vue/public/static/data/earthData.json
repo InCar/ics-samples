@@ -1,0 +1,3912 @@
+[
+  {
+    "name": "北京",
+    "enterprise": {
+      "enterData": 1272,
+      "car": 11835,
+      "user": 27410
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      116.40717,
+      39.90469
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 85.62,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 86.61,
+        "rate": 2.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 86.54,
+        "rate": 1.4,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        13.6,
+        16.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        17.6,
+        18.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "黑龙江",
+    "enterprise": {
+      "enterData": 840,
+      "car": 2541,
+      "user": 4610
+    },
+    "lineCar": {
+      "today": [
+        87,
+        60,
+        70,
+        50,
+        50,
+        45,
+        30,
+        55,
+        34,
+        35,
+        51,
+        43,
+        48,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        48,
+        12,
+        34,
+        18,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        21,
+        49,
+        67
+      ]
+    },
+    "value": [
+      126.66285,
+      45.74208
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 76.61,
+        "rate": 10.26,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 75.14,
+        "rate": 5.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 76.89,
+        "rate": 2.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        76,
+        45,
+        6,
+        28,
+        27.6,
+        76.7,
+        15.6,
+        12.2,
+        3.6,
+        20,
+        66.4,
+        36.3
+      ],
+      "moniteR": [
+        96,
+        54.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        17.6,
+        18.2,
+        48.7,
+        18.8,
+        63,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "吉林",
+    "enterprise": {
+      "enterData": 752,
+      "car": 1542,
+      "user": 2572
+    },
+    "lineCar": {
+      "today": [
+        27,
+        30,
+        20,
+        40,
+        50,
+        15,
+        30,
+        25,
+        34,
+        45,
+        21,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        32,
+        34,
+        48,
+        52,
+        67,
+        11,
+        50,
+        56,
+        52,
+        51,
+        29,
+        67
+      ]
+    },
+    "value": [
+      125.4638671875,
+      43.8345267822
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 90.22,
+        "rate": 4.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 86.16,
+        "rate": 1.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 88.24,
+        "rate": 2.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        25.2,
+        25.6,
+        76.7,
+        15.6,
+        12.2,
+        32.6,
+        20,
+        69.4,
+        37.3
+      ],
+      "moniteR": [
+        23.6,
+        5.9,
+        9,
+        26.4,
+        8.7,
+        70.7,
+        17.6,
+        82.2,
+        48.7,
+        180.8,
+        61,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "辽宁",
+    "enterprise": {
+      "enterData": 893,
+      "car": 1155,
+      "user": 2534
+    },
+    "lineCar": {
+      "today": [
+        27,
+        30,
+        20,
+        40,
+        50,
+        25,
+        30,
+        25,
+        64,
+        85,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        68,
+        52,
+        67,
+        71,
+        50,
+        36,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      123.42925,
+      41.83571
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 84.22,
+        "rate": 2.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 85.21,
+        "rate": 1.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 85.44,
+        "rate": 1.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        22,
+        41.9,
+        73,
+        23.2,
+        25.6,
+        767.7,
+        15.6,
+        162.2,
+        32.6,
+        260,
+        64.4,
+        36.3
+      ],
+      "moniteR": [
+        2.6,
+        56.9,
+        9,
+        26.4,
+        28.7,
+        80.7,
+        175.6,
+        142.2,
+        4.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "天津",
+    "enterprise": {
+      "enterData": 830,
+      "car": 2564,
+      "user": 4530
+    },
+    "lineCar": {
+      "today": [
+        17,
+        30,
+        70,
+        40,
+        40,
+        25,
+        50,
+        75,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        82,
+        97,
+        91,
+        70,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      117.19937,
+      39.0851
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 83.32,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 83.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 82.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        29,
+        46.9,
+        72,
+        23.2,
+        25.6,
+        76.7,
+        35.6,
+        62.2,
+        32.6,
+        20,
+        64.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "内蒙古",
+    "enterprise": {
+      "enterData": 213,
+      "car": 468,
+      "user": 892
+    },
+    "lineCar": {
+      "today": [
+        667,
+        430,
+        740,
+        450,
+        520,
+        225,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        180,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        180,
+        412,
+        34,
+        48,
+        52,
+        67,
+        831,
+        50,
+        56,
+        352,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      111.76522,
+      40.81733
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 70.22,
+        "rate": 7.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 77.14,
+        "rate": 1.66,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 2.7,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        25,
+        4.9,
+        74,
+        23.2,
+        25.6,
+        76.7,
+        15.6,
+        12.2,
+        328.6,
+        200,
+        65.4,
+        36.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        266.4,
+        286.7,
+        10.7,
+        15.6,
+        12.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "新疆",
+    "enterprise": {
+      "enterData": 153,
+      "car": 315,
+      "user": 610
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      87.451171875,
+      43.8345267822
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 81.22,
+        "rate": 3.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 85.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 89.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "宁夏",
+    "enterprise": {
+      "enterData": 143,
+      "car": 354,
+      "user": 720
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      106.25867,
+      38.47117
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 86.22,
+        "rate": 2.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 85.21,
+        "rate": 1.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 85.44,
+        "rate": 1.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        2.7,
+        70.7,
+        175.6,
+        12.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "青海",
+    "enterprise": {
+      "enterData": 173,
+      "car": 413,
+      "user": 745
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        30,
+        40,
+        50,
+        55,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        18,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        18,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        536,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      101.78011,
+      36.62087
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 70.22,
+        "rate": 7.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 75.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        20,
+        48.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        42.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        12.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "甘肃",
+    "enterprise": {
+      "enterData": 113,
+      "car": 230,
+      "user": 421
+    },
+    "lineCar": {
+      "today": [
+        17,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        23,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        66,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      103.82634,
+      36.05942
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 86.23,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 84.12,
+        "rate": 1.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 88.11,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        21,
+        42.9,
+        73,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        21.6,
+        50.9,
+        98,
+        26.4,
+        28.7,
+        70.7,
+        17.6,
+        18.2,
+        4.7,
+        18.8,
+        62,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "陕西",
+    "enterprise": {
+      "enterData": 460,
+      "car": 853,
+      "user": 1681
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      108.984375,
+      34.0526594214
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 88.22,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 86.16,
+        "rate": 1.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 88.24,
+        "rate": 2.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        20,
+        47.9,
+        75,
+        23.2,
+        2.6,
+        6.7,
+        15.6,
+        12.2,
+        2.6,
+        20,
+        60.4,
+        31.3
+      ],
+      "moniteR": [
+        20.6,
+        53.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        15.6,
+        18.2,
+        48.7,
+        18.8,
+        62,
+        20.3
+      ]
+    }
+  },
+  {
+    "name": "西藏",
+    "enterprise": {
+      "enterData": 23,
+      "car": 45,
+      "user": 105
+    },
+    "lineCar": {
+      "today": [
+        267,
+        30,
+        740,
+        40,
+        50,
+        25,
+        330,
+        25,
+        34,
+        45,
+        351,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        142,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      91.0546875,
+      29.6116701152
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 64.22,
+        "rate": 12.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 85.21,
+        "rate": 21.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 85.44,
+        "rate": 1.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        20,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "四川",
+    "enterprise": {
+      "enterData": 952,
+      "car": 3555,
+      "user": 14132
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      104.07572,
+      30.65089
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 82.32,
+        "rate": 7.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 77.14,
+        "rate": 24.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        25,
+        4.9,
+        7,
+        239.2,
+        257.6,
+        76.7,
+        15.6,
+        12.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "重庆",
+    "enterprise": {
+      "enterData": 415,
+      "car": 1325,
+      "user": 2698
+    },
+    "lineCar": {
+      "today": [
+        657,
+        30,
+        70,
+        450,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      106.55073,
+      29.56471
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 82.22,
+        "rate": 2.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 77.14,
+        "rate": 44.66,
+        "up": true
+      },
+      "isokR": {
+        "onR": 85.89,
+        "rate": 2.7,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "贵州",
+    "enterprise": {
+      "enterData": 550,
+      "car": 1320,
+      "user": 2680
+    },
+    "lineCar": {
+      "today": [
+        67,
+        50,
+        70,
+        4,
+        50,
+        65,
+        30,
+        25,
+        64,
+        75,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        36,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      106.70722,
+      26.5982
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 75.22,
+        "rate": 10.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 75.14,
+        "rate": 54.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 80.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        12.6,
+        5.9,
+        9,
+        26.4,
+        128.7,
+        170.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "云南",
+    "enterprise": {
+      "enterData": 265,
+      "car": 810,
+      "user": 1805
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      102.6123046875,
+      24.686952412
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 76.22,
+        "rate": 11.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 75.14,
+        "rate": 54.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 86.89,
+        "rate": 2.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        12,
+        24.9,
+        17,
+        123.2,
+        125.6,
+        76.7,
+        35.6,
+        62.2,
+        32.6,
+        20,
+        6.4,
+        13.3
+      ],
+      "moniteR": [
+        12.6,
+        15.9,
+        19,
+        26.4,
+        28.7,
+        70.7,
+        15.6,
+        12.2,
+        48.7,
+        18.8,
+        16,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "山西",
+    "enterprise": {
+      "enterData": 746,
+      "car": 4957,
+      "user": 12620
+    },
+    "lineCar": {
+      "today": [
+        47,
+        50,
+        40,
+        30,
+        20,
+        75,
+        80,
+        15,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        38,
+        62,
+        87,
+        61,
+        50,
+        56,
+        62,
+        51,
+        19,
+        67
+      ]
+    },
+    "value": [
+      112.5439453125,
+      37.7185903256
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 88.22,
+        "rate": 4.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 76.16,
+        "rate": 1.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 86.24,
+        "rate": 2.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        112,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        35.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        13.3
+      ],
+      "moniteR": [
+        5.6,
+        5.9,
+        9,
+        26.4,
+        8.7,
+        70.7,
+        175.6,
+        12.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "河北",
+    "enterprise": {
+      "enterData": 942,
+      "car": 2715,
+      "user": 4590
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        170,
+        40,
+        50,
+        25,
+        30,
+        25,
+        134,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        138,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        150,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      114.78515625,
+      37.7880813841
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 84.22,
+        "rate": 1.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 75.14,
+        "rate": 2.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 86.89,
+        "rate": 2.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "山东",
+    "enterprise": {
+      "enterData": 1502,
+      "car": 10765,
+      "user": 32642
+    },
+    "lineCar": {
+      "today": [
+        77,
+        80,
+        90,
+        10,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      117.3779296875,
+      36.2797072052
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 84.22,
+        "rate": 1.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 86.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        226.4,
+        28.7,
+        70.7,
+        15.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "河南",
+    "enterprise": {
+      "enterData": 935,
+      "car": 16358,
+      "user": 34658
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      113.7744140625,
+      34.5608593671
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 76.32,
+        "rate": 10.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 80.14,
+        "rate": 2.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        22,
+        14.9,
+        27,
+        23.2,
+        25.6,
+        76.7,
+        35.6,
+        12.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "安徽",
+    "enterprise": {
+      "enterData": 451,
+      "car": 1832,
+      "user": 3259
+    },
+    "lineCar": {
+      "today": [
+        47,
+        40,
+        60,
+        10,
+        30,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        64,
+        48,
+        82,
+        47,
+        81,
+        50,
+        56,
+        22,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      117.4658203125,
+      31.6907818061
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 89.23,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 88.12,
+        "rate": 1.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 88.11,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        12,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        12.2,
+        32.6,
+        0,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        0,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        9,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "江苏",
+    "enterprise": {
+      "enterData": 1161,
+      "car": 8499,
+      "user": 20061
+    },
+    "lineCar": {
+      "today": [
+        77,
+        30,
+        430,
+        40,
+        50,
+        225,
+        30,
+        25,
+        34,
+        45,
+        51,
+        423,
+        138,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        138,
+        42,
+        34,
+        48,
+        52,
+        67,
+        821,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      120.6298828125,
+      31.2503781499
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 89.32,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 84.14,
+        "rate": 2.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        12,
+        24.9,
+        17,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        62.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        12.2,
+        4.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "上海",
+    "enterprise": {
+      "enterData": 1497,
+      "car": 18863,
+      "user": 37124
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      121.5197753906,
+      31.1846091357
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 92.23,
+        "rate": 1.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 89.12,
+        "rate": 1.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 91.11,
+        "rate": 2.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        12,
+        4.9,
+        27,
+        23.2,
+        25.6,
+        76.7,
+        15.6,
+        12.2,
+        32.6,
+        20,
+        63.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        15.6,
+        182.2,
+        4.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "湖北",
+    "enterprise": {
+      "enterData": 651,
+      "car": 2415,
+      "user": 4324
+    },
+    "lineCar": {
+      "today": [
+        267,
+        20,
+        10,
+        20,
+        50,
+        25,
+        30,
+        25,
+        34,
+        35,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        24,
+        18,
+        22,
+        67,
+        81,
+        30,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      114.289984,
+      30.5942
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 86.22,
+        "rate": 7.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 85.14,
+        "rate": 1.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        12,
+        14.9,
+        17,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        120.7,
+        175.6,
+        12.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "湖南",
+    "enterprise": {
+      "enterData": 451,
+      "car": 1502,
+      "user": 2890
+    },
+    "lineCar": {
+      "today": [
+        27,
+        30,
+        30,
+        40,
+        50,
+        25,
+        30,
+        55,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      113.1591796875,
+      28.0719803018
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 86.23,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 84.12,
+        "rate": 3.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 86.11,
+        "rate": 1.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "江西",
+    "enterprise": {
+      "enterData": 253,
+      "car": 1264,
+      "user": 15842
+    },
+    "lineCar": {
+      "today": [
+        637,
+        30,
+        70,
+        40,
+        530,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        532,
+        67,
+        81,
+        530,
+        56,
+        532,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      115.9716796875,
+      28.4203910857
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 83.22,
+        "rate": 5.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 85.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        12,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        5.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        5.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "浙江",
+    "enterprise": {
+      "enterData": 940,
+      "car": 2681,
+      "user": 4751
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      120.5859375,
+      29.1905328323
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 83.22,
+        "rate": 7.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 89.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        75.6,
+        182.2,
+        8.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "福建",
+    "enterprise": {
+      "enterData": 1051,
+      "car": 6938,
+      "user": 22615
+    },
+    "lineCar": {
+      "today": [
+        67,
+        230,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        438,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        438,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        152,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      119.3115234375,
+      25.9185261621
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 82.22,
+        "rate": 1.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 86.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 3.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        5.6,
+        2.2,
+        4.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "台湾",
+    "enterprise": {
+      "enterData": 0,
+      "car": 0,
+      "user": 0
+    },
+    "lineCar": {
+      "today": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "value": [
+      121.640625,
+      24.5671083526
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      },
+      "isokR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        51.6,
+        76.7,
+        135.6,
+        12.2,
+        32.6,
+        0,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "广西",
+    "enterprise": {
+      "enterData": 413,
+      "car": 1520,
+      "user": 3262
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      108.45703125,
+      22.9179229361
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 86.23,
+        "rate": 1.8,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 83.12,
+        "rate": 1.8,
+        "up": false
+      },
+      "isokR": {
+        "onR": 86.11,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        13.6,
+        16.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        7.7,
+        175.6,
+        18.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "海南",
+    "enterprise": {
+      "enterData": 93,
+      "car": 214,
+      "user": 455
+    },
+    "lineCar": {
+      "today": [
+        37,
+        10,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        55,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        46,
+        72,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      110.302734375,
+      19.7667035517
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 86.22,
+        "rate": 2.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 85.14,
+        "rate": 4.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 87.89,
+        "rate": 1.6,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "广东",
+    "enterprise": {
+      "enterData": 1634,
+      "car": 16245,
+      "user": 35064
+    },
+    "lineCar": {
+      "today": [
+        67,
+        30,
+        70,
+        40,
+        50,
+        25,
+        30,
+        25,
+        34,
+        45,
+        51,
+        43,
+        38,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        38,
+        42,
+        34,
+        48,
+        52,
+        67,
+        81,
+        50,
+        56,
+        52,
+        51,
+        49,
+        67
+      ]
+    },
+    "value": [
+      114.08203125,
+      23.6445241986
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 89.22,
+        "rate": 0.8,
+        "up": false
+      },
+      "moniteR": {
+        "onR": 86.14,
+        "rate": 1.8,
+        "up": true
+      },
+      "isokR": {
+        "onR": 89.89,
+        "rate": 0.6,
+        "up": false
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        12.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        74.7,
+        175.6,
+        12.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "香港",
+    "enterprise": {
+      "enterData": 0,
+      "car": 0,
+      "user": 0
+    },
+    "lineCar": {
+      "today": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "value": [
+      114.1918945313,
+      22.2890964187
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      },
+      "isokR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        12,
+        24.9,
+        17,
+        23.2,
+        25.6,
+        76.7,
+        15.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  },
+  {
+    "name": "澳门",
+    "enterprise": {
+      "enterData": 0,
+      "car": 0,
+      "user": 0
+    },
+    "lineCar": {
+      "today": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "yesterday": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "value": [
+      113.5491943359,
+      22.1619706144
+    ],
+    "rate": {
+      "onLineR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      },
+      "moniteR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      },
+      "isokR": {
+        "onR": 0,
+        "rate": 0,
+        "up": true
+      }
+    },
+    "monthBar": {
+      "onlineR": [
+        2,
+        4.9,
+        7,
+        23.2,
+        25.6,
+        76.7,
+        135.6,
+        162.2,
+        32.6,
+        20,
+        6.4,
+        3.3
+      ],
+      "moniteR": [
+        2.6,
+        5.9,
+        9,
+        26.4,
+        28.7,
+        70.7,
+        175.6,
+        182.2,
+        48.7,
+        18.8,
+        6,
+        2.3
+      ]
+    }
+  }
+]

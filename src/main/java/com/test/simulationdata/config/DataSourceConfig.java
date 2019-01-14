@@ -1,4 +1,4 @@
-package com.incarcloud.simulationdata.config;
+package com.test.simulationdata.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;

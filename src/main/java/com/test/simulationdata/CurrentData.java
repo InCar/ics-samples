@@ -1,7 +1,7 @@
-package com.incarcloud.simulationdata;
+package com.test.simulationdata;
 
-import com.incarcloud.simulationdata.entity.ObdLocation;
-import com.incarcloud.websocket.GprsWebSocket;
+import com.test.simulationdata.entity.ObdLocation;
+import com.test.websocket.GprsWebSocket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

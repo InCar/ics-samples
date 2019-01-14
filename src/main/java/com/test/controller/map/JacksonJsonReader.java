@@ -1,4 +1,4 @@
-package com.incarcloud.controller.map;
+package com.test.controller.map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

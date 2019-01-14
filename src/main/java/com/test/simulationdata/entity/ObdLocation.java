@@ -1,4 +1,4 @@
-package com.incarcloud.simulationdata.entity;
+package com.test.simulationdata.entity;
 
 import java.sql.Timestamp;
 

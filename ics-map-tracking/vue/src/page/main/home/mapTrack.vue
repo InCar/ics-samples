@@ -16,6 +16,7 @@
         <div id="apiId" style="width: 60%;height: 60%; top: 10%; left: 40%;">
         </div>
         <div id="button">切换地图大小</div>
+        <div id="back" @click="clickBack">返回</div>
     </div>
 </template>
 <script>
@@ -25,28 +26,31 @@
         data() {
             return {};
         },
+        created(){
+            this.obj = this.$route.query
+            console.log(this.$route.query)
+        },
         mounted() {
             this.initData();
         },
-        beforeDestroy() {
-        },
+        beforeDestroy() {},
         methods: {
             initData() {
                 let isOpen = false;
                 let button = document.getElementById("button");
                 let apiId = document.getElementById("apiId");
-                button.onclick = function () { //按钮切换地图大小，以及更改地图样式显示
+                button.onclick = function() { //按钮切换地图大小，以及更改地图样式显示
                     isOpen = !isOpen;
-                    if (isOpen) {
+                    if (isOpen){
                         apiId.style.width = "100%";
-                        apiId.style.height = "100%";
-                        apiId.style.top = "0px";
-                        apiId.style.left = "0px";
-                    } else {
-                        apiId.style.width = "60%";
-                        apiId.style.height = "60%";
-                        apiId.style.top = "10%";
-                        apiId.style.left = "40%";
+                        apiId.style.height="100%";
+                        apiId.style.top="0px";
+                        apiId.style.left="0px";
+                    }else{
+                        apiId.style.width ="60%";
+                        apiId.style.height="60%";
+                        apiId.style.top="10%";
+                        apiId.style.left="40%";
                     }
                 };
                 let track = new Maptrack({
@@ -58,9 +62,9 @@
                         zoom: 16, // 初始化地图层级
                         trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                         trackParam: { //五分钟拖尾轨迹初始化参数
-                            startTime: 1540038362000,
-                            endTime: 1540038605000,
-                            vin: "LVGEN56A4JG247290"
+                            startTime: this.obj.startTime,
+                            endTime: this.obj.endTime,
+                            vin: this.obj.vin
                         },
                         iconUrl: "../static/images/driving.png", // 车辆图标
                         startIcon: "../static/images/start.png", // 轨迹开始图标
@@ -79,19 +83,19 @@
                     }
                 });
                 // 轨迹点击事件  外部扩展
-                track.on("play", function () {
+                track.on("play", function() {
                     console.log("you click play!");
                 });
-                track.on("pause", function () {
+                track.on("pause", function() {
                     console.log("you click pause!");
                 });
-                track.on("stop", function () {
+                track.on("stop", function() {
                     console.log("you click stop!");
                 });
-                track.on("add", function () {
+                track.on("add", function() {
                     console.log("you click add!");
                 });
-                track.on("reduce", function () {
+                track.on("reduce", function() {
                     console.log("you click reduce!");
                 });
                 // gps转成百度坐标
@@ -104,11 +108,11 @@
                         lat: 39.990912172420714,
                         lng: 116.32715863448607
                     };
-                    let newData = track.translateToBmap(data);
-                    let point = new BMap.Point(newData.lng, newData.lat);
-                    let marker = new BMap.Marker(point);
-                    map.addOverlay(marker); // 标点
-                });
+                let newData = track.translateToBmap(data);
+                let point = new BMap.Point(newData.lng, newData.lat);
+                let marker = new BMap.Marker(point);
+                map.addOverlay(marker); // 标点
+            });
 
                 // 加载多个地图
                 // let api = new Maptrack({
@@ -133,6 +137,9 @@
                 //     let marker = new BMap.Marker(point);
                 //     map.addOverlay(marker);  // 标点
                 //    })
+            },
+            clickBack(){
+                this.$router.push({ path:"/main/vehicleList"})
             }
         }
     };

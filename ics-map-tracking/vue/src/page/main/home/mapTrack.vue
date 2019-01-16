@@ -59,8 +59,8 @@
             <Button size="default" type="primary" @click="goSplitTrack">分段轨迹</Button>
             <Button size="default" type="primary" @click="goPosition">实时位置</Button>
         </div>
-        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:80%;top: 10px;left: 40%">
-            <div id="apiId" style="width: 70%;height:80%;top: 50px;right: 25px"></div>
+        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:100%;top: 10px;left: 30%">
+            <div id="apiId" style="width: 87%;height:100%;top: 50px;"></div>
         </div>
 
     </div>

@@ -54,8 +54,7 @@
         <div id="back" @click="clickBack">返回</div>
         <div style="display:inline-block;position:absolute;left: 15%;top: 50px; width: 20%;height: 100%">
             <div  class="vehicle" v-for="(item,key) in vehicleList"  @click="son(item,key)" :class='key==selected?"selected":""'>
-                车牌号
-                {{item.plateNo}}  vin:{{item.vin}}
+                车牌号：  {{item.plateNo}}  vin:{{item.vin}}
             </div>
             <div>
                 <DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="width: 52%;padding-top: 10px"></DatePicker>
@@ -66,8 +65,8 @@
 
             <Button size="default" type="primary" @click="goSplitTrack">分段轨迹</Button>
         </div>
-        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:80%;top: 10px;left: 40%">
-            <div id="apiId" style="width: 70%;height:80%;top: 50px;right: 25px"></div>
+        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:100%;top: 10px;left: 30%">
+            <div id="apiId" style="width: 87%;height:100%;top: 50px;"></div>
         </div>
 
     </div>
@@ -149,7 +148,7 @@
             });
             },
             clickBack(){
-                this.$router.push({ path:"/main/vehicleList"})
+                this.$router.push({ path:"/main/mapTrack"})
             },
             vehicleData(){
                 vehicle({},(data)=>{

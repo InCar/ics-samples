@@ -65,8 +65,8 @@
 
             <Button size="default" type="primary" @click="goSplitTrack">分段轨迹</Button>
         </div>
-        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:100%;top: 10px;left: 30%">
-            <div id="apiId" style="width: 87%;height:100%;top: 50px;"></div>
+        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:97%;top: 10px;left: 30%">
+            <div id="apiId" style="width: 87%;height:97%;top: 50px;"></div>
         </div>
 
     </div>

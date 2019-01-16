@@ -10,19 +10,22 @@
         color: white;
     }
     #leftBg{
+        position: absolute;
         left: 0;
         width:20%;
         height: 100%;
-        background: url(../../../images/leftBg.png) no-repeat -10px 0;
+        bottom: 0;
+        background: url(../../../images/leftBg.png) no-repeat;
+        //background-size: 40% 100%;
     }
     #topBg{
-        width: 90%;
-        height: 15%;
-        left: 10%;
+        width: 100%;
+        height: 9%;
+        left: 14%;
         top: 0;
         position: absolute;
-        background-size: 90% 15%;
         background: url(../../../images/topBg.png) no-repeat 0 -10px;
+
     }
 
 
@@ -48,14 +51,14 @@
           <Button size="default" type="primary" @click="goPosition">实时位置</Button>
       </div>
       <div style="display:inline-block;position:absolute;right:0;width: 80%;height:80%;top: 10px;left: 40%">
-          <div id="map" style="width: 70%;height:80%;top: 50px;right: 25px"></div>
+          <div id="apiId" style="width: 70%;height:80%;top: 50px;right: 25px"></div>
       </div>
 
   </div>
 </template>
 <script>
-import Maptrack from "Maptrack"; //页面使用 需要引入
-import {vehicle} from  'service/vehicleList.js';
+    import Maptrack from "Maptrack"; //页面使用 需要引入
+    import {vehicle} from  'service/vehicleList.js';
 
 export default {
     components: {},
@@ -77,7 +80,7 @@ export default {
     methods: {
         initData() {
             let track = new Maptrack({
-                dom: "map",
+                dom: "apiId",
                 mapType: "bmap",
                 mapTrack: true, // 是否开启五分钟拖尾轨迹
                 config: {
@@ -105,6 +108,7 @@ export default {
                     }
                 }
             });
+            // 轨迹点击事件  外部扩展
             track.on("play", function() {
                 console.log("you click play!");
             });
@@ -120,9 +124,46 @@ export default {
             track.on("reduce", function() {
                 console.log("you click reduce!");
             });
-            track.init(()=>{})
+            // gps转成百度坐标
+            // track.translateToBmap({lat: 39.990912172420714, lng: 116.32715863448607})
+            // gps转高德坐标
+            // track.GPS.translateToAmap({lat: 39.990912172420714, lng: 116.32715863448607})
+            //地图初始化 创建点
+            track.init((BMap, map) => {
+                let data = {
+                    lat: 39.990912172420714,
+                    lng: 116.32715863448607
+                };
+                let newData = track.translateToBmap(data);
+                let point = new BMap.Point(newData.lng, newData.lat);
+                let marker = new BMap.Marker(point);
+                map.addOverlay(marker); // 标点
+            });
 
-    },
+            // 加载多个地图
+            // let api = new Maptrack({
+            //     dom: "api",
+            //     mapType: 'bmap',
+            //     mapTrack: false,       // 是否开启轨迹
+            //     mapMointer: false,   // 是否开启推送
+            //     config: {
+            //         // soketUrl: 'ws://192.168.75.1:8889/api/ws/gpsWebSocket'
+            //         trackControl: {
+            //             startButton: '开',
+            //         }
+            //     }
+            // });
+            // api.init((BMap, map) => {
+            //     let data = {
+            //         lat: 39.990912172420714,
+            //         lng: 116.32715863448607
+            //     }
+            //      let newData = track.translateToBmap(data)
+            //     let point = new BMap.Point(newData.lng, newData.lat);
+            //     let marker = new BMap.Marker(point);
+            //     map.addOverlay(marker);  // 标点
+            //    })
+        },
         son(item,key){
             this.selected=key;
             this.vin = item.vin;
@@ -134,6 +175,7 @@ export default {
             if (this.startTime) obj.startTime = new Date(this.startTime).getTime()
             if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
             this.$router.push({ path:"/main/mapTrack",   query:obj})
+
         },
         goSplitTrack() {
             let obj = {

@@ -22,17 +22,59 @@
         z-index: 999999;
 
     }
+    .vehicle{
+        cursor:pointer;
+        line-height: 30px;
+
+    }
+    .vehicle.selected{
+        background:darkgray;
+        color: white;
+    }
+    #leftBg{
+        left: 0;
+        width:20%;
+        height: 100%;
+        background: url(../../../images/leftBg.png) no-repeat -10px 0;
+    }
+    #topBg{
+        width: 90%;
+        height: 15%;
+        left: 13%;
+        top: 0;
+        position: absolute;
+        background-size: 90% 15%;
+        background: url(../../../images/topBg.png) no-repeat 0 -10px;
+    }
 </style>
 <template>
-    <div style="width:100%;height:100%;">
-        <div id="apiId" style="width: 60%;height: 60%; top: 10%; left: 40%;">
-        </div>
-        <div id="button">切换地图大小</div>
+    <div style="width:100%;height:100%;position:relative;background:ghostwhite">
+        <div id="leftBg"></div>
+        <div id="topBg"></div>
         <div id="back" @click="clickBack">返回</div>
+        <div style="display:inline-block;position:absolute;left: 15%;top: 50px; width: 20%;height: 100%">
+            <div  class="vehicle" v-for="(item,key) in vehicleList"  @click="son(item,key)" :class='key==selected?"selected":""'>
+                {{item.plateNo}}  vin:{{item.vin}}
+
+            </div>
+            <div>
+                <DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="width: 52%;padding-top: 10px"></DatePicker>
+            </div>
+            <div>
+                <DatePicker type="datetime" v-model="endTime" placeholder="结束时间" style="width: 52%;padding-top: 10px"></DatePicker>
+            </div>
+
+            <Button size="default" type="primary" @click="goPosition">实时位置</Button>
+        </div>
+        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:80%;top: 10px;left: 40%">
+            <div id="apiId" style="width: 70%;height:80%;top: 50px;right: 25px"></div>
+        </div>
+
     </div>
 </template>
 <script>
     import Maptrack from "Maptrack"; //页面使用 需要引入
+    import {vehicle} from  'service/vehicleList.js';
     export default {
         components: {},
         data() {
@@ -42,6 +84,7 @@
         },
         mounted() {
             this.initData();
+            this.vehicleData();
         },
         created(){
             this.obj = this.$route.query
@@ -53,20 +96,6 @@
                 let isOpen = false;
                 let button = document.getElementById("button");
                 let apiId = document.getElementById("apiId");
-                button.onclick = function() { //按钮切换地图大小，以及更改地图样式显示
-                    isOpen = !isOpen;
-                    if (isOpen){
-                        apiId.style.width = "100%";
-                        apiId.style.height="100%";
-                        apiId.style.top="0px";
-                        apiId.style.left="0px";
-                    }else{
-                        apiId.style.width ="60%";
-                        apiId.style.height="60%";
-                        apiId.style.top="10%";
-                        apiId.style.left="40%";
-                    }
-                };
                 let track = new Maptrack({
                     dom: "apiId",
                     mapType: "bmap",
@@ -116,34 +145,23 @@
                 let marker = new BMap.Marker(point);
                 map.addOverlay(marker); // 标点
             });
-
-                // 加载多个地图
-                // let api = new Maptrack({
-                //     dom: "api",
-                //     mapType: 'bmap',
-                //     mapTrack: false,       // 是否开启轨迹
-                //     mapMointer: false,   // 是否开启推送
-                //     config: {
-                //         // soketUrl: 'ws://192.168.75.1:8889/api/ws/gpsWebSocket'
-                //         trackControl: {
-                //             startButton: '开',
-                //         }
-                //     }
-                // });
-                // api.init((BMap, map) => {
-                //     let data = {
-                //         lat: 39.990912172420714,
-                //         lng: 116.32715863448607
-                //     }
-                //      let newData = track.translateToBmap(data)
-                //     let point = new BMap.Point(newData.lng, newData.lat);
-                //     let marker = new BMap.Marker(point);
-                //     map.addOverlay(marker);  // 标点
-                //    })
             },
             clickBack(){
-                this.$router.push({ path:"/main/vehicleList"})
-            }
+                this.$router.push({ path:"/main/mapTrack"})
+            },
+            vehicleData(){
+                vehicle({},(data)=>{
+                    this.vehicleList=data;
+                })
+            },
+            goPosition() {
+                let obj = {
+                    vin: this.vin
+                }
+                if (this.startTime) obj.startTime = new Date(this.startTime).getTime()
+                if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
+                this.$router.push({ path:"/main/home",   query:obj})
+            },
         }
     };
 </script>

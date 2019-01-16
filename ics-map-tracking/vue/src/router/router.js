@@ -13,7 +13,7 @@ require.ensure([], () => r(require("../page/main/main")), "main");
 
 // login
 const login = r =>
-require.ensure([], () => r(require("../page/main/home/vehicleList")), "vehicleList");
+require.ensure([], () => r(require("../page/main/home/mapTrack")), "mapTrack");
 
 // 首页
 const home = r =>

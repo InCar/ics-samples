@@ -54,7 +54,7 @@
         <div id="back" @click="clickBack">返回</div>
         <div style="display:inline-block;position:absolute;left: 15%;top: 50px; width: 20%;height: 100%">
             <div  class="vehicle" v-for="(item,key) in vehicleList"  @click="son(item,key)" :class='key==selected?"selected":""'>
-                车牌号：  {{item.plateNo}}  vin:{{item.vin}}
+                车牌号： {{item.plateNo}}  vin:{{item.vin}}
             </div>
             <div>
                 <DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="width: 52%;padding-top: 10px"></DatePicker>
@@ -77,7 +77,13 @@
     export default {
         components: {},
         data() {
-            return {};
+            return {
+                vehicleList:[],
+                selected:-1,
+                startTime:"",
+                endTime:"",
+                vin:""
+            };
         },
         created(){
             this.obj = this.$route.query
@@ -155,6 +161,10 @@
                     this.vehicleList=data;
                     console.log(data);
                 })
+            },
+            son(item,key){
+                this.selected=key;
+                this.vin = item.vin;
             },
             goSplitTrack() {
                 let obj = {

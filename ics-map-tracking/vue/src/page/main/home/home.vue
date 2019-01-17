@@ -79,7 +79,12 @@
         components: {},
         data() {
             return {
-                obj: {}
+                vehicleList:[],
+                obj: {},
+                selected:-1,
+                startTime:"",
+                endTime:"",
+                vin:""
             };
         },
         mounted() {
@@ -162,6 +167,10 @@
                 if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
                 this.$router.push({ path:"/main/home",   query:obj})
             },
+            son(item,key){
+                this.selected=key;
+                this.vin = item.vin;
+            }
         }
     };
 </script>

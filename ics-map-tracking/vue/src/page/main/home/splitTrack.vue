@@ -1,19 +1,8 @@
 <style lang="scss" scoped>
-    #button {
-        position: absolute;
-        left: 0;
-        top: 10%;
-        cursor: pointer;
-        padding: 10px;
-        background: blue;
-        border-radius: 4px;
-        color: white;
-        z-index: 999999;
-    }
     #back{
         position: absolute;
-        right: 30px;
-        top: 60px;
+        right: 15px;
+        top: 20px;
         cursor: pointer;
         padding: 10px;
         background: blue;
@@ -27,47 +16,67 @@
         line-height: 30px;
 
     }
-    .vehicle.selected{
-        background:darkgray;
-        color: white;
+    .vehicle{
+        cursor:pointer;
+        line-height: 30px;
+
     }
-    #leftBg{
-        left: 0;
-        width:20%;
-        height: 100%;
-        background: url(../../../images/leftBg.png) no-repeat -10px 0;
-    }
-    #topBg{
-        width: 90%;
-        height: 15%;
-        left: 13%;
-        top: 0;
+    #leftList{
+        display:inline-table;
         position: absolute;
-        background-size: 90% 15%;
-        background: url(../../../images/topBg.png) no-repeat 0 -10px;
+        width: 50%;
+        top: 10px;
+        left: 10px;
+        height: 100%;
+    }
+    table,table tr td{
+        border: 1px solid #515a6e;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    table{
+        left: 10px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    #apiId{
+        display:inline-block;
+        position:absolute;
+        right:0;
+        top: 10px;
+        width: 64%;
+        height:97%;
+        left: 35%;
+    }
+    #time{
+        width: 38%;
+        padding-top: 10px;
     }
 </style>
 <template>
     <div style="width:100%;height:100%;position:relative;background:ghostwhite">
-        <div id="leftBg"></div>
-        <div id="topBg"></div>
         <div id="back" @click="clickBack">返回</div>
-        <div style="display:inline-block;position:absolute;left: 15%;top: 50px; width: 20%;height: 100%">
-            <div  class="vehicle" v-for="(item,key) in vehicleList"  @click="son(item,key)" :class='key==selected?"selected":""'>
-                车牌号： {{item.plateNo}}  vin:{{item.vin}}
+        <div id="leftList">
+            <table>
+                <tr>
+                    <td>车牌号</td>
+                    <td>vin</td>
+                    <td>操作</td>
+                </tr>
+                <tr class="vehicle" v-for="(item,key) in vehicleList">
+                    <td>{{item.plateNo}}</td>
+                    <td>vin:{{item.vin}}</td>
+                    <td><Button size="default" type="primary" @click="goSplitTrack(item,key)">分段轨迹</Button></td>
+                </tr>
+            </table>
+            <div>
+                开始时间：<DatePicker id="time" type="datetime" v-model="startTime" placeholder="开始时间" ></DatePicker>
             </div>
             <div>
-                <DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="width: 52%;padding-top: 10px"></DatePicker>
+                结束时间：<DatePicker id ="time" type="datetime" v-model="endTime" placeholder="结束时间"></DatePicker>
             </div>
-            <div>
-                <DatePicker type="datetime" v-model="endTime" placeholder="结束时间" style="width: 52%;padding-top: 10px"></DatePicker>
-            </div>
-
-            <Button size="default" type="primary" @click="goSplitTrack">分段轨迹</Button>
         </div>
-        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:97%;top: 10px;left: 30%">
-            <div id="apiId" style="width: 87%;height:97%;top: 50px;"></div>
-        </div>
+        <div id="apiId"></div>
 
     </div>
 </template>
@@ -105,8 +114,8 @@
                         zoom: 16, // 初始化地图层级
                         trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                         splitTrackParam: { //分段轨迹初始化参数
-                            startTime: this.obj.startTime,
-                            endTime: this.obj.endTime,
+                            startTime: 1541779200000,
+                            endTime: 1541951999000,
                             vin: this.obj.vin
                         },
                         iconUrl: "../static/images/driving.png", // 车辆图标
@@ -162,11 +171,9 @@
                     console.log(data);
                 })
             },
-            son(item,key){
+            goSplitTrack(item,key) {
                 this.selected=key;
                 this.vin = item.vin;
-            },
-            goSplitTrack() {
                 let obj = {
                     vin: this.vin
                 }

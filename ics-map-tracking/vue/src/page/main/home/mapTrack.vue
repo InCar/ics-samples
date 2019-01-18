@@ -1,67 +1,60 @@
 <style lang="scss" scoped>
-    #button {
-        position: absolute;
-        left: 0;
-        top: 10%;
-        cursor: pointer;
-        padding: 10px;
-        background: blue;
-        border-radius: 4px;
-        color: white;
-        z-index: 999999;
-    }
 
     .vehicle{
         cursor:pointer;
-        line-height: 30px;
 
     }
     .vehicle.selected{
         background:darkgray;
         color: white;
     }
-    #leftBg{
+    #leftList{
+        display:inline-table;
         position: absolute;
-        left: 0;
-        width:20%;
+        width: 50%;
+        top: 10px;
+        left: 10px;
         height: 100%;
-        bottom: 0;
-        background: url(../../../images/leftBg.png) no-repeat;
-    //background-size: 40% 100%;
     }
-    #topBg{
-        width: 100%;
-        height: 9%;
-        left: 14%;
-        top: 0;
-        position: absolute;
-        background: url(../../../images/topBg.png) no-repeat 0 -10px;
+    table,table tr td{
+        border: 1px solid #515a6e;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    table{
+        left: 10px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    #apiId{
+        display:inline-block;
+        position:absolute;
+        right:0;
+        top: 10px;
+        width: 64%;
+        height:97%;
+        left: 35%;
+    }
 
-    }
 </style>
 <template>
     <div style="width:100%;height:100%;position:relative;background:ghostwhite">
-        <div id="leftBg"></div>
-        <div id="topBg"></div>
-        <div style="display:inline-block;position:absolute;left: 15%;top: 50px; width: 20%;height: 100%">
-            <div  class="vehicle" v-for="(item,key) in vehicleList"  @click="son(item,key)" :class='key==selected?"selected":""'>
-                {{item.plateNo}}  vin:{{item.vin}}
-
-            </div>
-            <div>
-                <DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="width: 52%;padding-top: 10px"></DatePicker>
-            </div>
-            <div>
-                <DatePicker type="datetime" v-model="endTime" placeholder="结束时间" style="width: 52%;padding-top: 10px"></DatePicker>
-            </div>
-
-            <Button size="default" type="primary" @click="goTrack">5分钟轨迹</Button>
-            <Button size="default" type="primary" @click="goSplitTrack">分段轨迹</Button>
-            <Button size="default" type="primary" @click="goPosition">实时位置</Button>
+        <div id="leftList">
+                <table>
+                    <tr>
+                        <td>车牌号</td>
+                        <td>vin</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr class="vehicle" v-for="(item,key) in vehicleList">
+                        <td>{{item.plateNo}}</td>
+                        <td>vin:{{item.vin}}</td>
+                        <td><Button size="default" type="primary" @click="goSplitTrack(item,key)">分段轨迹</Button>&nbsp;
+                            <Button size="default" type="primary" @click="goPosition(item,key)">实时位置</Button></td>
+                    </tr>
+                </table>
         </div>
-        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:97%;top: 10px;left: 30%">
-            <div id="apiId" style="width: 87%;height:97%;top: 50px;"></div>
-        </div>
+            <div id="apiId"></div>
 
     </div>
 </template>
@@ -147,33 +140,21 @@
                 map.addOverlay(marker); // 标点
             });
             },
-            son(item,key){
+            goSplitTrack(item,key) {
                 this.selected=key;
-                this.vin = item.vin;
-            },
-            goTrack() {
+                this.vin=item.vin;
                 let obj = {
                     vin: this.vin
                 }
-                if (this.startTime) obj.startTime = new Date(this.startTime).getTime()
-                if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
-                this.$router.push({ path:"/main/mapTrack",   query:obj})
-
-            },
-            goSplitTrack() {
-                let obj = {
-                    vin: this.vin
-                }
-                if (this.startTime) obj.startTime = new Date(this.startTime).getTime()
-                if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
                 this.$router.push({ path:"/main/splitTrack",   query:obj})
             },
-            goPosition() {
+            goPosition(item,key) {
+                this.selected=key;
+                this.vin = item.vin;
+
                 let obj = {
                     vin: this.vin
                 }
-                if (this.startTime) obj.startTime = new Date(this.startTime).getTime()
-                if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
                 this.$router.push({ path:"/main/home",   query:obj})
             },
             vehicleData(){

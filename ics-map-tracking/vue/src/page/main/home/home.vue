@@ -1,19 +1,9 @@
 <style lang="scss" scoped>
-    #button {
-        position: absolute;
-        left: 0;
-        top: 10%;
-        cursor: pointer;
-        padding: 10px;
-        background: blue;
-        border-radius: 4px;
-        color: white;
-        z-index: 999999;
-    }
+
     #back{
         position: absolute;
-        right: 8px;
-        top: 30px;
+        right: 15px;
+        top: 20px;
         cursor: pointer;
         padding: 10px;
         background: blue;
@@ -27,48 +17,53 @@
         line-height: 30px;
 
     }
-    .vehicle.selected{
-        background:darkgray;
-        color: white;
-    }
-    #leftBg{
-        left: 0;
-        width:20%;
-        height: 100%;
-        background: url(../../../images/leftBg.png) no-repeat -10px 0;
-    }
-    #topBg{
-        width: 90%;
-        height: 15%;
-        left: 13%;
-        top: 0;
+    #leftList{
+        display:inline-table;
         position: absolute;
-        background-size: 90% 15%;
-        background: url(../../../images/topBg.png) no-repeat 0 -10px;
+        width: 50%;
+        top: 10px;
+        left: 10px;
+        height: 100%;
     }
+    table,table tr td{
+        border: 1px solid #515a6e;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    table{
+        left: 10px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    #apiId{
+        display:inline-block;
+        position:absolute;
+        right:0;
+        top: 10px;
+        width: 64%;
+        height:97%;
+        left: 35%;
+    }
+
 </style>
 <template>
     <div style="width:100%;height:100%;position:relative;background:ghostwhite">
-        <div id="leftBg"></div>
-        <div id="topBg"></div>
         <div id="back" @click="clickBack">返回</div>
-        <div style="display:inline-block;position:absolute;left: 15%;top: 50px; width: 20%;height: 100%">
-            <div  class="vehicle" v-for="(item,key) in vehicleList"  @click="son(item,key)" :class='key==selected?"selected":""'>
-                {{item.plateNo}}  vin:{{item.vin}}
-
-            </div>
-            <div>
-                <DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="width: 52%;padding-top: 10px"></DatePicker>
-            </div>
-            <div>
-                <DatePicker type="datetime" v-model="endTime" placeholder="结束时间" style="width: 52%;padding-top: 10px"></DatePicker>
-            </div>
-
-            <Button size="default" type="primary" @click="goPosition">实时位置</Button>
+        <div id="leftList">
+            <table>
+                <tr>
+                    <td>车牌号</td>
+                    <td>vin</td>
+                    <td>操作</td>
+                </tr>
+                <tr class="vehicle" v-for="(item,key) in vehicleList">
+                    <td>{{item.plateNo}}</td>
+                    <td>vin:{{item.vin}}</td>
+                    <td><Button size="default" type="primary" @click="goPosition(item,key)">实时位置</Button></td>
+                </tr>
+            </table>
         </div>
-        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:97%;top: 10px;left: 30%">
-            <div id="apiId" style="width: 87%;height:97%;top: 50px;"></div>
-        </div>
+        <div id="apiId"></div>
 
     </div>
 </template>
@@ -98,9 +93,6 @@
         beforeDestroy() {},
         methods: {
             initData() {
-                let isOpen = false;
-                let button = document.getElementById("button");
-                let apiId = document.getElementById("apiId");
                 let track = new Maptrack({
                     dom: "apiId",
                     mapType: "bmap",
@@ -150,6 +142,9 @@
                 let marker = new BMap.Marker(point);
                 map.addOverlay(marker); // 标点
             });
+            },
+            checkChange(item,key){
+
             },
             clickBack(){
                 this.$router.push({ path:"/main/mapTrack"})

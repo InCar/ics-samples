@@ -38,7 +38,7 @@ public class CurrentData implements ApplicationRunner {
 
         for (int i = 0; i < vinList.size(); i++) {
             String vin = vinList.get(i);
-            String recordTime = "2018-10-19 14:45:50";
+            String recordTime = "2018-11-09 20:48:02";
             String recordTimeEnd = "2018-12-21 14:07:57";
             String sql2 = "select * from t_obd_location where vin = ? and  recordtime >= ? and recordtime < ? order by locationtime";
             Object args[] = new Object[]{vin, recordTime, recordTimeEnd};

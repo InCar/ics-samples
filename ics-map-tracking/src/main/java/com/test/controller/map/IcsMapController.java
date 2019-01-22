@@ -31,7 +31,7 @@ public class IcsMapController {
         config.addScanPackages("com.test.controller");
 
         //数据库自定义配置
-        JdbcConfig mysqlConfig = new JdbcConfig("com.mysql.cj.jdbc.Driver", "jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&useSSL=false&rewriteBatchedStatements=true&serverTimezone=CTT&autoReconnect=true", "root", "rootroot");
+        JdbcConfig mysqlConfig = new JdbcConfig("com.mysql.cj.jdbc.Driver", "jdbc:mysql://47.98.211.203:3306/test?characterEncoding=utf8&useSSL=false&rewriteBatchedStatements=true&serverTimezone=CTT&autoReconnect=true", "root", "maptracking");
         config.withJdbcConfig(mysqlConfig);
         //初始化
         context.init();

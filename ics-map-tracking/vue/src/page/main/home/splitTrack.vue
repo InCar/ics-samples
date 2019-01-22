@@ -76,10 +76,10 @@
                     <td><Button size="default" type="primary" @click="search(item,key)">分段轨迹</Button></td>
                 </tr>
             </table>
-            <div id="checkPo" @click="onChange()"></div>
-            <div id="timeHidden" style="display: block">
+            <div id="checkPo"></div>
+            <div id="timeHidden" style="display: none">
             <div>
-                开始时间：<DatePicker id="time" type="datetime" v-model="startTime" placeholder="开始时间" ></DatePicker>
+                开始时间：<DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="" ></DatePicker>
             </div>
             <div>
                 结束时间：<DatePicker id ="time" type="datetime" v-model="endTime" placeholder="结束时间"></DatePicker>
@@ -106,7 +106,11 @@
             };
         },
         created(){
-            this.obj = this.$route.query
+            this.vin = this.$route.query.vin
+            if((this.startTime=="" || this.startTime==null) && (this.endTime==""||this.endTime==null)){
+                this.startTime=1541779200000;
+                this.endTime=1541951999000
+            }
             console.log(this.$route.query)
         },
         mounted() {
@@ -116,6 +120,19 @@
         beforeDestroy() {},
         methods: {
             initData() {
+                //时间框显示隐藏
+                let change = true;
+                let timeHidden = document.getElementById("timeHidden");
+                let picture=document.getElementById("checkPo");
+                picture.onclick=function () {
+                    change=!change;
+                    if(change){
+                        timeHidden.style.display="block";
+                    }else {
+                        timeHidden.style.display="none";
+                    }
+                }
+
                 this.track = new Maptrack({
                     dom: "apiId",
                     mapType: "bmap",
@@ -123,9 +140,9 @@
                     trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                     config: {
                         splitTrackParam: { //分段轨迹初始化参数
-                            startTime: 1541779200000,
-                            endTime: 1541951999000,
-                            vin: this.obj.vin,
+                            startTime: this.startTime,
+                            endTime: this.endTime,
+                            vin: this.vin,
                             gpsSplitTimeMills: 60000
                         },
                         iconUrl: "../static/images/driving.png", // 车辆图标
@@ -150,20 +167,9 @@
                 this.selected=key;
                 this.vin = item.vin;
 
-                this.track.search({startTime: 1541779200000,
-                    endTime: 1541951999000,
+                this.track.search({startTime: this.startTime,
+                    endTime: this.endTime,
                     vin: this.vin})
-            },
-            onChange(){
-                let change = false;
-                let timeHidden = document.getElementById("timeHidden");
-                let picture = document.getElementById("checkPo");
-                if(change){
-                   // picture.style.background=url("../../../images/top.png") no-repeat;
-                    //timeHidden.style.display=
-                }else {
-
-                }
             }
 
         }

@@ -93,10 +93,21 @@
         beforeDestroy() {},
         methods: {
             initData() {
+                let i = 0;
                 this.track = new Maptrack({
                     dom: "apiId",
                     mapType: "bmap",
                     trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
+                    currentSoket: (data) =>{
+                        if(i === 0) {
+                            console.log(this)
+                            console.log(data.locationTime)
+
+                            this.endTime=data.locationTime;
+                            this.startTime=data.locationTime-300*1000;
+                        }
+                        i++;
+                    },
                     mapMointer: true, // 是否开启推送
                     config: {
                         soketUrl: "ws://127.0.0.1:8889/api/ws/gpsWebSocket", // websocket推送地址
@@ -128,8 +139,9 @@
                 console.log(isFlag)
                 console.log(this.vin)
                 if (isFlag == true){
+                    console.log(this.endTime);
                     this.track.addTrack({
-                    startTime: 1541767382000, endTime: 1541767682000, vin: this.vin
+                    startTime: this.startTime, endTime: this.endTime, vin: this.vin
                 })
             }else {
                     this.track.clearTrack();

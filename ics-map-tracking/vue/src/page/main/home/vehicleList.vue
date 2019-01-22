@@ -38,29 +38,30 @@
         background: url(../../../images/topBg.png) no-repeat 0 -10px;
 
     }
+    #search{
+        position: absolute;
+        right: 0;
+        top: 10%;
+        padding: 20px;
+        background: red;
+        cursor:pointer;
+    }
+    #change{
+        position: absolute;
+        right: 0;
+        top: 30%;
+        padding: 20px;
+        background: green;
+        cursor:pointer;
+    }
 </style>
 <template>
-    <div style="width:100%;height:100%;position:relative;background:ghostwhite">
-        <div style="display:inline-block;position:absolute;left: 15%;top: 50px; width: 20%;height: 100%">
-            <div  class="vehicle" v-for="(item,key) in vehicleList"  @click="son(item,key)" :class='key==selected?"selected":""'>
-                {{item.plateNo}}  vin:{{item.vin}}
-
-            </div>
-            <div>
-                <DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="width: 52%;padding-top: 10px"></DatePicker>
-            </div>
-            <div>
-                <DatePicker type="datetime" v-model="endTime" placeholder="结束时间" style="width: 52%;padding-top: 10px"></DatePicker>
-            </div>
-
-            <Button size="default" type="primary" @click="goTrack">5分钟轨迹</Button>
-            <Button size="default" type="primary" @click="goSplitTrack">分段轨迹</Button>
-            <Button size="default" type="primary" @click="goPosition">实时位置</Button>
-        </div>
-        <div style="display:inline-block;position:absolute;right:0;width: 80%;height:97%;top: 10px;left: 30%">
-            <div id="apiId" style="width: 87%;height:97%;top: 50px;"></div>
-        </div>
-
+    <div style="width: 100%;height: 100%;">
+    <div id="apiId" style="width:50%;height:100%;">
+    </div>
+    <div id="button">点我</div>
+    <div id="search">搜索</div>
+    <div id="change">重载</div>
     </div>
 </template>
 <script>
@@ -93,6 +94,7 @@
                     mapType: "bmap",
                     mapTrack: true, // 是否开启五分钟拖尾轨迹
                     config: {
+                        showBorder: true, // 是否展示面板
                         gps: [116.404, 39.915], // 初始化地图经纬度
                         zoom: 16, // 初始化地图层级
                         trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
@@ -133,17 +135,32 @@
                 track.on("reduce", function() {
                     console.log("you click reduce!");
                 });
+                search.onclick = function () {
+                    track.search({startTime: 1541779200000, endTime: 1541951999000, vin: "LB37752Z3JL587321"})
+                }
+                change.onclick = function () {
+                    track.reload({
+                        dom: "apiId",
+                        mapType: 'bmap',
+                        splitTrack: true,
+                        config: {
+                            trackApi: '/api/sample',           // 自定义路径
+                            splitTrackParam: {startTime: 1543785649000, endTime: 1543856950000, vin: "LVGEN56A4JG247290", gpsSplitTimeMills: 60000},
+                        }
+                    })
+                }
+
                 //地图初始化 创建点
                 track.init((BMap, map) => {
                     let data = {
                         lat: 39.990912172420714,
                         lng: 116.32715863448607
-                    };
-                let newData = track.translateToBmap(data);
-                let point = new BMap.Point(newData.lng, newData.lat);
-                let marker = new BMap.Marker(point);
-                map.addOverlay(marker); // 标点
-            });
+                    }
+                    let newData = track.translateToBmap(data)
+                    let point = new BMap.Point(newData.lng, newData.lat);
+                    let marker = new BMap.Marker(point);
+                    map.addOverlay(marker);  // 标点
+                });
             },
             son(item,key){
                 this.selected=key;

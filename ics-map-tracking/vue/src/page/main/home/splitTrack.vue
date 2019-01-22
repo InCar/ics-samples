@@ -52,6 +52,13 @@
         width: 38%;
         padding-top: 10px;
     }
+    #checkPo{
+        width: 73px;
+        height: 11px;
+        z-index: 999999;
+        position: absolute;
+        background: url("../../../images/bottom.png") no-repeat;
+    }
 </style>
 <template>
     <div style="width:100%;height:100%;position:relative;background:ghostwhite">
@@ -66,14 +73,17 @@
                 <tr class="vehicle" v-for="(item,key) in vehicleList">
                     <td>{{item.plateNo}}</td>
                     <td>vin:{{item.vin}}</td>
-                    <td><Button size="default" type="primary" @click="goSplitTrack(item,key)">分段轨迹</Button></td>
+                    <td><Button size="default" type="primary" @click="search(item,key)">分段轨迹</Button></td>
                 </tr>
             </table>
+            <div id="checkPo" @click="onChange()"></div>
+            <div id="timeHidden" style="display: block">
             <div>
                 开始时间：<DatePicker id="time" type="datetime" v-model="startTime" placeholder="开始时间" ></DatePicker>
             </div>
             <div>
                 结束时间：<DatePicker id ="time" type="datetime" v-model="endTime" placeholder="结束时间"></DatePicker>
+            </div>
             </div>
         </div>
         <div id="apiId"></div>
@@ -91,7 +101,8 @@
                 selected:-1,
                 startTime:"",
                 endTime:"",
-                vin:""
+                vin:"",
+                track:null
             };
         },
         created(){
@@ -105,18 +116,17 @@
         beforeDestroy() {},
         methods: {
             initData() {
-                let track = new Maptrack({
+                this.track = new Maptrack({
                     dom: "apiId",
                     mapType: "bmap",
                     splitTrack: true, // 是否开启分段轨迹
+                    trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                     config: {
-                        gps: [116.404, 39.915], // 初始化地图经纬度
-                        zoom: 16, // 初始化地图层级
-                        trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                         splitTrackParam: { //分段轨迹初始化参数
                             startTime: 1541779200000,
                             endTime: 1541951999000,
-                            vin: this.obj.vin
+                            vin: this.obj.vin,
+                            gpsSplitTimeMills: 60000
                         },
                         iconUrl: "../static/images/driving.png", // 车辆图标
                         startIcon: "../static/images/start.png", // 轨迹开始图标
@@ -124,43 +134,8 @@
                         markerSize: [20, 43], // 车辆图标尺寸 原始图片尺寸，不需要偏移量
                         startEndSize: [26, 37], // 开始结束图标尺寸
                         startEndAnchor: [10, 37], // 开始结束图标偏移量，10是图片宽度的一半，37是图片高度
-                        trackControl: {
-                            // 轨迹按钮自定义
-                            startButton: "开",
-                            endButton: "暂停",
-                            stopButton: "停止",
-                            reduceButton: "减速",
-                            addButton: "加速"
-                        }
                     }
                 });
-                // 轨迹点击事件  外部扩展
-                track.on("play", function() {
-                    console.log("you click play!");
-                });
-                track.on("pause", function() {
-                    console.log("you click pause!");
-                });
-                track.on("stop", function() {
-                    console.log("you click stop!");
-                });
-                track.on("add", function() {
-                    console.log("you click add!");
-                });
-                track.on("reduce", function() {
-                    console.log("you click reduce!");
-                });
-                //地图初始化 创建点
-                track.init((BMap, map) => {
-                    let data = {
-                        lat: 39.990912172420714,
-                        lng: 116.32715863448607
-                    };
-                let newData = track.translateToBmap(data);
-                let point = new BMap.Point(newData.lng, newData.lat);
-                let marker = new BMap.Marker(point);
-                map.addOverlay(marker); // 标点
-            });
             },
             clickBack(){
                 this.$router.push({ path:"/main/mapTrack"})
@@ -171,16 +146,26 @@
                     console.log(data);
                 })
             },
-            goSplitTrack(item,key) {
+            search(item,key){
                 this.selected=key;
                 this.vin = item.vin;
-                let obj = {
-                    vin: this.vin
+
+                this.track.search({startTime: 1541779200000,
+                    endTime: 1541951999000,
+                    vin: this.vin})
+            },
+            onChange(){
+                let change = false;
+                let timeHidden = document.getElementById("timeHidden");
+                let picture = document.getElementById("checkPo");
+                if(change){
+                   // picture.style.background=url("../../../images/top.png") no-repeat;
+                    //timeHidden.style.display=
+                }else {
+
                 }
-                if (this.startTime) obj.startTime = new Date(this.startTime).getTime()
-                if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
-                this.$router.push({ path:"/main/splitTrack",   query:obj})
             }
+
         }
     };
 </script>

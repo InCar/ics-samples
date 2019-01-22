@@ -51,13 +51,12 @@ export default {
       let track = new Maptrack({
         dom: "apiId",
         mapType: "bmap",
-        mapTrack: false, // 是否开启五分钟拖尾轨迹
         splitTrack: false, // 是否开启分段轨迹
         mapMointer: true, // 是否开启推送
+        trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
         config: {
           gps: [116.404, 39.915], // 初始化地图经纬度
           zoom: 16, // 初始化地图层级
-          trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
           trackParam: { //五分钟拖尾轨迹初始化参数
             startTime: 1539108541000,
             endTime: 1539109463000,
@@ -106,17 +105,6 @@ export default {
       // track.translateToBmap({lat: 39.990912172420714, lng: 116.32715863448607})
       // gps转高德坐标
       // track.GPS.translateToAmap({lat: 39.990912172420714, lng: 116.32715863448607})
-      //地图初始化 创建点
-      track.init((BMap, map) => {
-        let data = {
-          lat: 39.990912172420714,
-          lng: 116.32715863448607
-        };
-        let newData = track.translateToBmap(data);
-        let point = new BMap.Point(newData.lng, newData.lat);
-        let marker = new BMap.Marker(point);
-        map.addOverlay(marker); // 标点
-      });
 
       // 加载多个地图
       // let api = new Maptrack({

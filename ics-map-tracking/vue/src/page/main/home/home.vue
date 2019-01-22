@@ -59,7 +59,7 @@
                 <tr class="vehicle" v-for="(item,key) in vehicleList">
                     <td>{{item.plateNo}}</td>
                     <td>vin:{{item.vin}}</td>
-                    <td><Button size="default" type="primary" @click="goPosition(item,key)">实时位置</Button></td>
+                    <td><Button size="default" type="primary" @click="search(item,key)">实时位置</Button>&nbsp;<checkbox v-model="checked" @on-change="change">五分钟轨迹</checkbox></td>
                 </tr>
             </table>
         </div>
@@ -75,11 +75,11 @@
         data() {
             return {
                 vehicleList:[],
-                obj: {},
                 selected:-1,
                 startTime:"",
                 endTime:"",
-                vin:""
+                vin:"",
+                track:null
             };
         },
         mounted() {
@@ -87,63 +87,23 @@
             this.vehicleData();
         },
         created(){
-            this.obj = this.$route.query
+            this.vin = this.$route.query.vin
             console.log(this.$route.query)
         },
         beforeDestroy() {},
         methods: {
             initData() {
-                let track = new Maptrack({
+                this.track = new Maptrack({
                     dom: "apiId",
                     mapType: "bmap",
+                    trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                     mapMointer: true, // 是否开启推送
                     config: {
-                        gps: [116.404, 39.915], // 初始化地图经纬度
-                        zoom: 16, // 初始化地图层级
-                        trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                         soketUrl: "ws://127.0.0.1:8889/api/ws/gpsWebSocket", // websocket推送地址
-                        vinCode: this.obj.vin, // websocket推送参数
+                        moniterParam: {vin: this.vin}, // 推送参数
                         iconUrl: "../static/images/driving.png", // 车辆图标
-                        startIcon: "../static/images/start.png", // 轨迹开始图标
-                        endIcon: "../static/images/end.png", // 轨迹结束图标
-                        markerSize: [20, 43], // 车辆图标尺寸 原始图片尺寸，不需要偏移量
-                        startEndSize: [26, 37], // 开始结束图标尺寸
-                        startEndAnchor: [10, 37], // 开始结束图标偏移量，10是图片宽度的一半，37是图片高度
                     }
                 });
-                // 轨迹点击事件  外部扩展
-                track.on("play", function() {
-                    console.log("you click play!");
-                });
-                track.on("pause", function() {
-                    console.log("you click pause!");
-                });
-                track.on("stop", function() {
-                    console.log("you click stop!");
-                });
-                track.on("add", function() {
-                    console.log("you click add!");
-                });
-                track.on("reduce", function() {
-                    console.log("you click reduce!");
-                });
-                // gps转成百度坐标
-                // track.translateToBmap({lat: 39.990912172420714, lng: 116.32715863448607})
-                // gps转高德坐标
-                // track.GPS.translateToAmap({lat: 39.990912172420714, lng: 116.32715863448607})
-                //地图初始化 创建点
-                track.init((BMap, map) => {
-                    let data = {
-                        lat: 39.990912172420714,
-                        lng: 116.32715863448607
-                    };
-                let newData = track.translateToBmap(data);
-                let point = new BMap.Point(newData.lng, newData.lat);
-                let marker = new BMap.Marker(point);
-                map.addOverlay(marker); // 标点
-            });
-            },
-            checkChange(item,key){
 
             },
             clickBack(){
@@ -154,17 +114,26 @@
                     this.vehicleList=data;
                 })
             },
-            goPosition() {
-                let obj = {
-                    vin: this.vin
-                }
-                if (this.startTime) obj.startTime = new Date(this.startTime).getTime()
-                if (this.endTime) obj.endTime = new Date(this.endTime).getTime()
-                this.$router.push({ path:"/main/home",   query:obj})
-            },
             son(item,key){
                 this.selected=key;
                 this.vin = item.vin;
+            },
+            search(item,key){
+                this.selected=key;
+                this.vin = item.vin;
+
+                this.track.search({vin: this.vin})
+            },
+            change(isFlag){
+                console.log(isFlag)
+                console.log(this.vin)
+                if (isFlag == true){
+                    this.track.addTrack({
+                    startTime: 1541767382000, endTime: 1541767682000, vin: this.vin
+                })
+            }else {
+                    this.track.clearTrack();
+                }
             }
         }
     };

@@ -79,7 +79,7 @@
             <div id="checkPo"></div>
             <div id="timeHidden" style="display: none">
             <div>
-                开始时间：<DatePicker type="datetime" v-model="startTime" placeholder="开始时间" style="" ></DatePicker>
+                开始时间：<DatePicker id="time" type="datetime" v-model="startTime" placeholder="开始时间" style="" ></DatePicker>
             </div>
             <div>
                 结束时间：<DatePicker id ="time" type="datetime" v-model="endTime" placeholder="结束时间"></DatePicker>
@@ -106,11 +106,9 @@
             };
         },
         created(){
-            this.vin = this.$route.query.vin
-            if((this.startTime=="" || this.startTime==null) && (this.endTime==""||this.endTime==null)){
-                this.startTime=1541779200000;
-                this.endTime=1541951999000
-            }
+               this.vin = this.$route.query.vin
+            this.startTime="2018-11-10 00:00:00";
+            this.endTime="2018/11/11 23:59:59"
             console.log(this.$route.query)
         },
         mounted() {
@@ -121,6 +119,9 @@
         methods: {
             initData() {
                 //时间框显示隐藏
+                let startTime = new Date(this.startTime).getTime().toString()
+                let endTime = new Date(this.endTime).getTime().toString()
+                console.log(this.startTime);
                 let change = true;
                 let timeHidden = document.getElementById("timeHidden");
                 let picture=document.getElementById("checkPo");
@@ -140,8 +141,8 @@
                     trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
                     config: {
                         splitTrackParam: { //分段轨迹初始化参数
-                            startTime: this.startTime,
-                            endTime: this.endTime,
+                            startTime: startTime,
+                            endTime: endTime,
                             vin: this.vin,
                             gpsSplitTimeMills: 60000
                         },
@@ -166,7 +167,8 @@
             search(item,key){
                 this.selected=key;
                 this.vin = item.vin;
-
+                this.startTime = new Date(this.startTime).getTime().toString()
+                this.endTime = new Date(this.endTime).getTime().toString()
                 this.track.search({startTime: this.startTime,
                     endTime: this.endTime,
                     vin: this.vin})

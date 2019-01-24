@@ -113,6 +113,7 @@
                         soketUrl: "ws://127.0.0.1:8889/api/ws/gpsWebSocket", // websocket推送地址
                         moniterParam: {vin: this.vin}, // 推送参数
                         iconUrl: "../static/images/driving.png", // 车辆图标
+                        markerSize: [20, 43], // 车辆图标尺寸 原始图片尺寸，不需要偏移量
                     }
                 });
 
